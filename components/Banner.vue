@@ -48,10 +48,10 @@ export default {
 <style scoped>
 .banner {
   display: flex;
-  justify-content: end;
+  /*justify-content: end;*/
   gap: 1rem;
-  margin-top: 7.6rem;
-  padding-right: 7.6rem;
+  margin-top: 6rem;
+  /*padding-right: 7.6rem;*/
 }
 
 .text {

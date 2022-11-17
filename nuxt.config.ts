@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     ],
     build: {
         // transpile: ['vuetify', 'swiper']
+        // transpile: ['gsap', 'swiper']
         transpile: ['swiper']
     },
     // buildModules: ['@nuxtjs/color-mode'],

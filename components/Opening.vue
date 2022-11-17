@@ -1,21 +1,21 @@
 <template>
-    <div class="text-area">
+    <div class="opening-area">
       <div class="title-area">
         <h1 class="title">
           <span>Y</span>
-          <span>u</span>
-          <span>k</span>
-          <span>a</span>
+          <span>U</span>
+          <span>K</span>
+          <span>A</span>
   <!--        <span>&nbsp</span>-->
           <br>
           <span>K</span>
-          <span>o</span>
-          <span>h</span>
-          <span>i</span>
-          <span>n</span>
-          <span>a</span>
-          <span>t</span>
-          <span>a</span>
+          <span>O</span>
+          <span>H</span>
+          <span>I</span>
+          <span>N</span>
+          <span>A</span>
+          <span>T</span>
+          <span>A</span>
         </h1>
       </div>
     </div>
@@ -55,10 +55,11 @@ export default {
 </script>
 
 <style scoped>
-.text-area {
+.opening-area {
   position: absolute;
   width: 100vw;
   height: 100vh;
+  z-index: 1;
 }
 
 .title-area {
@@ -74,7 +75,7 @@ h1 {
 }
 
 .title {
-  font-size: 4em;
+  font-size: 3em;
   color: #d32254;
 }
 

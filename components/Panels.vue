@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="second">
     <div class="text-center my-8" style="display: none;">
       <transition
           appear
@@ -11,10 +11,7 @@
       </transition>
     </div>
 
-<!--    <div class="bg-circle-01"></div>-->
-<!--    <div class="bg-circle-02"></div>-->
-
-    <div class="grid grid-cols-3 p-16 gap-16 photo-row1">
+    <div class="grid grid-cols-3 pt-48 gap-16 photo-row1">
       <div class="md:col-span-1 col-span-3">
         <img src="@/assets/photos/_DSC0871.jpg" alt="" height="600">
       </div>
@@ -26,64 +23,70 @@
       </div>
     </div>
 
-    <swiper
-        :effect="'coverflow'"
-        :grabCursor="true"
-        :centeredSlides="true"
-        :slidesPerView="'auto'"
-        :coverflowEffect="{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }"
-        :pagination="true"
-        :modules="modules"
-        class="mySwiper"
-        style="display: none;"
-    >
-      <swiper-slide
-      ><img
-          src="https://swiperjs.com/demos/images/nature-1.jpg"/></swiper-slide
-      >
-      <swiper-slide
-      ><img
-          src="https://swiperjs.com/demos/images/nature-2.jpg"/></swiper-slide
-      >
-      <swiper-slide
-      ><img
-          src="https://swiperjs.com/demos/images/nature-3.jpg"/></swiper-slide
-      >
-      <swiper-slide
-      ><img
-          src="https://swiperjs.com/demos/images/nature-4.jpg"/></swiper-slide
-      >
-      <swiper-slide
-      ><img
-          src="https://swiperjs.com/demos/images/nature-5.jpg"/></swiper-slide
-      >
-      <swiper-slide
-      ><img
-          src="https://swiperjs.com/demos/images/nature-6.jpg"/></swiper-slide
-      >
-      <swiper-slide
-      ><img
-          src="https://swiperjs.com/demos/images/nature-7.jpg"/></swiper-slide
-      >
-      <swiper-slide
-      ><img
-          src="https://swiperjs.com/demos/images/nature-8.jpg"/></swiper-slide
-      >
-      <swiper-slide
-      ><img src="https://swiperjs.com/demos/images/nature-9.jpg"
-      /></swiper-slide>
-    </swiper>
+<!--    <swiper-->
+<!--        :effect="'coverflow'"-->
+<!--        :grabCursor="true"-->
+<!--        :centeredSlides="true"-->
+<!--        :slidesPerView="'auto'"-->
+<!--        :coverflowEffect="{-->
+<!--            rotate: 50,-->
+<!--            stretch: 0,-->
+<!--            depth: 100,-->
+<!--            modifier: 1,-->
+<!--            slideShadows: true,-->
+<!--          }"-->
+<!--        :pagination="true"-->
+<!--        :modules="modules"-->
+<!--        class="mySwiper"-->
+<!--        style="display: none;"-->
+<!--    >-->
+<!--      <swiper-slide-->
+<!--      ><img-->
+<!--          src="https://swiperjs.com/demos/images/nature-1.jpg"/></swiper-slide-->
+<!--      >-->
+<!--      <swiper-slide-->
+<!--      ><img-->
+<!--          src="https://swiperjs.com/demos/images/nature-2.jpg"/></swiper-slide-->
+<!--      >-->
+<!--      <swiper-slide-->
+<!--      ><img-->
+<!--          src="https://swiperjs.com/demos/images/nature-3.jpg"/></swiper-slide-->
+<!--      >-->
+<!--      <swiper-slide-->
+<!--      ><img-->
+<!--          src="https://swiperjs.com/demos/images/nature-4.jpg"/></swiper-slide-->
+<!--      >-->
+<!--      <swiper-slide-->
+<!--      ><img-->
+<!--          src="https://swiperjs.com/demos/images/nature-5.jpg"/></swiper-slide-->
+<!--      >-->
+<!--      <swiper-slide-->
+<!--      ><img-->
+<!--          src="https://swiperjs.com/demos/images/nature-6.jpg"/></swiper-slide-->
+<!--      >-->
+<!--      <swiper-slide-->
+<!--      ><img-->
+<!--          src="https://swiperjs.com/demos/images/nature-7.jpg"/></swiper-slide-->
+<!--      >-->
+<!--      <swiper-slide-->
+<!--      ><img-->
+<!--          src="https://swiperjs.com/demos/images/nature-8.jpg"/></swiper-slide-->
+<!--      >-->
+<!--      <swiper-slide-->
+<!--      ><img src="https://swiperjs.com/demos/images/nature-9.jpg"-->
+<!--      /></swiper-slide>-->
+<!--    </swiper>-->
 
-<!--    <div class="area3 relative bg-gray-800">-->
-    <div class="area3 relative">
+    <div class="area3 relative mt-16">
+      <div>
         <img class="object-cover bg-gray-600 opacity-50"/>
-      <img class="object-cover bg-gray-600 opacity-50"/>
+      </div>
+      <div class="mt-16">
+        <img class="object-cover bg-gray-600 opacity-50"/>
+      </div>
+      <div class="mt-16">
+        <img class="object-cover bg-gray-600 opacity-50"/>
+      </div>
     </div>
 
 <!--    <SideScrollingPanel/>-->
@@ -116,24 +119,9 @@
 
 <script>
 import gsap from "gsap"
-import {ScrollTrigger} from "gsap/ScrollTrigger"
-
-// Import Swiper Vue.js components
 import {Swiper, SwiperSlide} from "swiper/vue"
-
-// Import Swiper styles
-// import "swiper/swiper.min.css"
-import "swiper/swiper-bundle.css"
-
-// import "swiper/css/effect-coverflow"
-// import "swiper/css/pagination"
-// import "./style.css"
-
-
-// import required modules
 import {EffectCoverflow, Pagination} from "swiper"
-
-gsap.registerPlugin(ScrollTrigger)
+import "swiper/swiper-bundle.css"
 
 export default {
   components: {
@@ -156,7 +144,6 @@ export default {
       //   }
       // })
       //     .from(".text1", {x: innerWidth * 1, opacity: 0, duration: 5})
-      //     .from(".text2", {x: innerWidth * 1, opacity: 0})
 
       gsap.timeline({
         scrollTrigger: {
@@ -216,11 +203,6 @@ export default {
             opacity: 1,
           })
 
-      // gsap.set(".bg-circle-01", {
-      //   opacity: 1,
-      //   y: -50
-      // });
-
       gsap
           .timeline({
             defaults: {ease: "power2.out", duration: 1}, // timelineのプロパティ
@@ -250,7 +232,7 @@ export default {
           })
           .to(".bg-circle-01", {
             duration: 0.5,
-            scale: 2,
+            scale: 1.5,
           })
 
       // 横スクロール
@@ -398,8 +380,8 @@ export default {
 
 <style scoped>
 .area3 {
-  height: 100vh;
-  width: 100%;
+  /*height: 100vh;*/
+  /*width: 100%;*/
 }
 .swiper {
   width: 100%;
@@ -422,9 +404,10 @@ export default {
 .object-cover {
   width: 60vw;
   height: 60vw;
-  background-image: url("@/assets/photos/_DSC1707-強化 (2).jpg");
+  background-image: url("@/assets/photos/_DSC1707.jpg");
   background-size: cover;
   border-radius: 50%;
+  margin: 0 auto;
   pointer-events: none;
 }
 
