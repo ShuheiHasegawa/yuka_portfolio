@@ -119,14 +119,14 @@
 
 <script>
 import gsap from "gsap"
-import {Swiper, SwiperSlide} from "swiper/vue"
-import {EffectCoverflow, Pagination} from "swiper"
-import "swiper/swiper-bundle.css"
+// import {Swiper, SwiperSlide} from "swiper/vue"
+// import {EffectCoverflow, Pagination} from "swiper"
+// import "swiper/swiper-bundle.css"
 
 export default {
   components: {
-    Swiper,
-    SwiperSlide,
+    // Swiper,
+    // SwiperSlide,
   },
   mounted() {
     this.scrollAnimation()
@@ -353,23 +353,23 @@ export default {
       });
     }
 
-    const onSwiper = (swiper) => {
-      console.log(swiper)
-    }
-    const onSlideChange = () => {
-      console.log("slide change")
-    }
+    // const onSwiper = (swiper) => {
+    //   console.log(swiper)
+    // }
+    // const onSlideChange = () => {
+    //   console.log("slide change")
+    // }
 
     return {
-      onSwiper,
-      onSlideChange,
+      // onSwiper,
+      // onSlideChange,
       panelsBeforeEnter,
       panelsEnter,
       enter,
       beforePhoto,
       enterPhoto,
       afterPhoto,
-      modules: [EffectCoverflow, Pagination],
+      // modules: [EffectCoverflow, Pagination],
       photoList1,
       photoList2,
       photoList3,
