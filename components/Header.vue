@@ -53,7 +53,7 @@
       <!-- ヘッダー -->
       <header class="c-header js-header">
         <div class="theme-select c-temp">
-          <h1 class="flex justify-center gap-4">
+          <h1 class="flex justify-center gap-4 theme-btns">
             <div
                 class="rounded-full h-20 w-20 light-theme text-center"
                 @click="$colorMode.preference = 'light'"
@@ -566,7 +566,7 @@ export default {
               ease: "power2.out", duration: 1
             }, // timelineのプロパティ
             scrollTrigger: {
-              markers: true, // マーカーを表示するか（開発用）
+              // markers: true, // マーカーを表示するか（開発用）
               trigger: ".second", // この要素と交差するとイベントが発火
               start: "top center", // ウィンドウのどの位置を発火の基準点にするか
               // start: "center top", // ウィンドウのどの位置を発火の基準点にするか
@@ -752,11 +752,15 @@ export default {
 }
 .c-header {
   position: absolute;
+  z-index: 9;
 }
 .theme-select {
   /*position: absolute;*/
   /*text-align: center;*/
   /*margin: 0 auto;*/
+}
+.theme-btns div {
+  cursor: pointer;
 }
 .theme-text {
   line-height: 4em;
@@ -815,9 +819,9 @@ export default {
   background-image: url("@/assets/photos/_DSC3634.jpg");
   background-size: cover;
   position: absolute;
-  z-index: -1;
-  /*top: 35vh;*/
-  left: -36vw;
+  z-index: -2;
+  top: 10vh;
+  left: -40vw;
   width: 70vh;
   height: 70vh;
   border-radius: 50%;
@@ -828,10 +832,10 @@ export default {
   background-image: url("@/assets/photos/_DSC3409.jpg");
   background-size: cover;
   position: absolute;
-  z-index: -2;
-  right: -25vw;
-  width: 45vh;
-  height: 45vh;
+  z-index: -1;
+  right: -15vw;
+  width: 25vh;
+  height: 25vh;
   border-radius: 50%;
   pointer-events: none;
 }
@@ -841,7 +845,7 @@ export default {
     background-image: url("@/assets/photos/_DSC3634.jpg");
     background-size: cover;
     position: absolute;
-    z-index: -1;
+    z-index: -2;
     bottom: 20vh;
     left: -16vw;
     width: 80vmax;
@@ -854,7 +858,7 @@ export default {
     background-image: url("@/assets/photos/_DSC3409.jpg");
     background-size: cover;
     position: absolute;
-    z-index: -2;
+    z-index: -1;
     top: 5vh;
     right: -6vw;
     width: 50vmax;

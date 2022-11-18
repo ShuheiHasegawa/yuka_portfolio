@@ -93,11 +93,11 @@
 
     <ScrollingPanel/>
 
-    <div class="panel4 bg-white">
-      <h2 class="text-base text1">Everything you need</h2>
-    </div>
+<!--    <div class="panel4 bg-white">-->
+<!--      <h2 class="text-base text1">Everything you need</h2>-->
+<!--    </div>-->
 
-    <div class="panel5" style="display: none;">
+    <div class="panel5 h-screen w-screen flex justify-center items-center">
       <ul id="polaroids">
         <li><a href="img/bear.jpg" title="しろくまさん">
           <img src="@/assets/photos/_DSC0094.jpg" alt="白熊の写真"></a></li>
@@ -416,8 +416,12 @@ export default {
 }
 
 .panel5 {
-  height: 100vmax;
-  margin-bottom: 10vh;
+  height: 250vmax;
+}
+@media (min-width: 480px) {
+  .panel5 {
+    height: 75vh;
+  }
 }
 
 @font-face {
@@ -427,9 +431,7 @@ export default {
 
 ul#polaroids {
   list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
-  width: 720px;
+  width: 50%;
 }
 
 ul#polaroids li a {
