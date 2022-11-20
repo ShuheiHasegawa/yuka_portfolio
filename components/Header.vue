@@ -733,6 +733,41 @@ export default {
           console.log("drag ended");
         }
       });
+
+      gsap
+          .timeline({
+            defaults: {
+              ease: "power2.out", duration: 1
+            }, // timelineのプロパティ
+            scrollTrigger: {
+              // markers: true, // マーカーを表示するか（開発用）
+              trigger: ".bg-circle-01", // この要素と交差するとイベントが発火
+              start: "center bottom", // ウィンドウのどの位置を発火の基準点にするか
+              end: "center top", // ウィンドウのどの位置をイベントの終了点にするか
+              // toggleActions: "restart none none none", // スクロールイベントで発火するアニメーションの種
+              toggleActions: "play reverse play reverse", // スクロールイベントで発火するアニメーションの種
+              scrub: true, // スクロールに応じて動かす
+              // onScrubComplete: self => {
+              // if(self.progress === 1) {
+              //   self.kill();
+              //   self.set(".bg-circle-01, .bg-circle-02", {
+              //     scale: 0,
+              //   })
+              // }
+              // }
+            },
+          })
+          .from(".bg-circle-01", {
+            delay: 0.5,
+            duration: 0.5,
+            opacity: 1,
+            scale:1,
+          })
+          .to(".bg-circle-01", {
+            duration: 0.5,
+            scale: 1.5,
+          })
+
     }
   }
 }
@@ -744,7 +779,7 @@ export default {
   /*width: 100vw;*/
 }
 .main {
-  height: 100vh;
+  /*height: 100vh;*/
   width: 100vw;
   /*width: 390px;*/
   overflow: hidden;
@@ -866,6 +901,7 @@ export default {
     border-radius: 50%;
     pointer-events: none;
   }
+
 }
 
 .c-loader-bg {

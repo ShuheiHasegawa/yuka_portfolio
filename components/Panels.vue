@@ -1,4 +1,33 @@
 <template>
+  <div id="circle03" class="bg-circle-container">
+    <div class="bg-circle bg-circle-03"></div>
+    <div class="bg-circle-back color-two"></div>
+  </div>
+  <div id="circle04" class="bg-circle-container">
+    <div class="bg-circle bg-circle-04"></div>
+    <div class="bg-circle-back color-three"></div>
+  </div>
+  <div id="circle05" class="bg-circle-container">
+    <div class="bg-circle bg-circle-05"></div>
+    <div class="bg-circle-back color-four"></div>
+  </div>
+  <div id="circle06" class="bg-circle-container">
+    <div class="bg-circle bg-circle-06"></div>
+    <div class="bg-circle-back color-six"></div>
+  </div>
+  <div id="circle07" class="bg-circle-container">
+    <div class="bg-circle bg-circle-07"></div>
+    <div class="bg-circle-back color-seven"></div>
+  </div>
+  <div id="circle08" class="bg-circle-container">
+    <div class="bg-circle bg-circle-08"></div>
+    <div class="bg-circle-back color-eight"></div>
+  </div>
+  <div id="circle09" class="bg-circle-container">
+    <div class="bg-circle bg-circle-09"></div>
+    <div class="bg-circle-back color-nine"></div>
+  </div>
+
   <div class="second">
     <div class="text-center my-8" style="display: none;">
       <transition
@@ -11,17 +40,17 @@
       </transition>
     </div>
 
-    <div class="grid grid-cols-3 pt-48 gap-16 photo-row1">
-      <div class="md:col-span-1 col-span-3">
-        <img src="@/assets/photos/_DSC0871.jpg" alt="" height="600">
-      </div>
-      <div class="md:col-span-1 col-span-3">
-        <img src="@/assets/photos/_DSC1146.jpg" alt="" height="600">
-      </div>
-      <div class="md:col-span-1 col-span-3">
-        <img src="@/assets/photos/_DSC0890.jpg" alt="" height="600">
-      </div>
-    </div>
+<!--    <div class="grid grid-cols-3 pt-48 gap-16 photo-row1">-->
+<!--      <div class="md:col-span-1 col-span-3">-->
+<!--        <img src="@/assets/photos/_DSC0871.jpg" alt="" height="600">-->
+<!--      </div>-->
+<!--      <div class="md:col-span-1 col-span-3">-->
+<!--        <img src="@/assets/photos/_DSC1146.jpg" alt="" height="600">-->
+<!--      </div>-->
+<!--      <div class="md:col-span-1 col-span-3">-->
+<!--        <img src="@/assets/photos/_DSC0890.jpg" alt="" height="600">-->
+<!--      </div>-->
+<!--    </div>-->
 
 <!--    <swiper-->
 <!--        :effect="'coverflow'"-->
@@ -79,13 +108,13 @@
 
     <div class="area3 relative mt-16">
       <div>
-        <img class="object-cover bg-gray-600 opacity-50"/>
+        <img class="gray-circle01 bg-gray-600 opacity-50"/>
       </div>
       <div class="mt-16">
-        <img class="object-cover bg-gray-600 opacity-50"/>
+        <img class="gray-circle02 bg-gray-600 opacity-50"/>
       </div>
       <div class="mt-16">
-        <img class="object-cover bg-gray-600 opacity-50"/>
+        <img class="gray-circle03 bg-gray-600 opacity-50"/>
       </div>
     </div>
 
@@ -105,16 +134,17 @@
           <img src="@/assets/photos/_DSC2000.jpg" alt="鹿の写真"></a></li>
         <li><a href="img/penguin.jpg" title="水の中のペンギンさん">
           <img src="@/assets/photos/_DSC2507.jpg" alt="ペンギンの写真"></a></li>
-        <li><a href="img/giraffe.jpg" title="首が長いキリン">
+        <li><a href="img/giraffe.jpg" title="ふりかえりゆかさん">
           <img src="@/assets/photos/_DSC3634.jpg" alt="麒麟の写真"></a></li>
-        <li><a href="img/goat.jpg" title="かわいい子ヤギ">
+        <li><a href="img/goat.jpg" title="はい、チーズ">
           <img src="@/assets/photos/_DSC4014.jpg" alt="山羊の写真"></a></li>
-        <li><a href="img/tiger.jpg" title="ねているトラ">
+        <li><a href="img/tiger.jpg" title="パフェゆかさん">
           <img src="@/assets/photos/_DSC3942.jpg" alt="虎の写真"></a></li>
       </ul>
     </div>
 
   </div>
+
 </template>
 
 <script>
@@ -203,38 +233,6 @@ export default {
             opacity: 1,
           })
 
-      gsap
-          .timeline({
-            defaults: {ease: "power2.out", duration: 1}, // timelineのプロパティ
-            scrollTrigger: {
-              // markers: true, // マーカーを表示するか（開発用）
-              trigger: ".bg-circle-01", // この要素と交差するとイベントが発火
-              start: "center bottom", // ウィンドウのどの位置を発火の基準点にするか
-              end: "center top", // ウィンドウのどの位置をイベントの終了点にするか
-              // toggleActions: "restart none none none", // スクロールイベントで発火するアニメーションの種
-              toggleActions: "play reverse play reverse", // スクロールイベントで発火するアニメーションの種
-              scrub: true, // スクロールに応じて動かす
-              // onScrubComplete: self => {
-                // if(self.progress === 1) {
-                //   self.kill();
-                //   self.set(".bg-circle-01, .bg-circle-02", {
-                //     scale: 0,
-                //   })
-                // }
-              // }
-            },
-          })
-          .from(".bg-circle-01", {
-            delay: 0.5,
-            duration: 0.5,
-            opacity: 1,
-            scale:1,
-          })
-          .to(".bg-circle-01", {
-            duration: 0.5,
-            scale: 1.5,
-          })
-
       // 横スクロール
       const wrapper = document.querySelector('#wrapper');
       if(wrapper) {
@@ -260,6 +258,251 @@ export default {
           }
         })
       }
+
+      gsap
+          .timeline({
+            defaults: {
+              ease: "power2.out", duration: 1
+            }, // timelineのプロパティ
+            scrollTrigger: {
+              // markers: true, // マーカーを表示するか（開発用）
+              trigger: "#circle03", // この要素と交差するとイベントが発火
+              start: "center bottom", // ウィンドウのどの位置を発火の基準点にするか
+              end: "top top", // ウィンドウのどの位置をイベントの終了点にするか
+              // start: 'top bottom',
+              // end: 'bottom top',
+              // toggleActions: "restart none none none", // スクロールイベントで発火するアニメーションの種
+              toggleActions: "play reverse play reverse", // スクロールイベントで発火するアニメーションの種
+              scrub: true, // スクロールに応じて動かす
+              // onScrubComplete: self => {
+              // if(self.progress === 1) {
+              //   self.kill();
+              //   self.set(".bg-circle-01, .bg-circle-02", {
+              //     scale: 0,
+              //   })
+              // }
+              // }
+            },
+          })
+          .from("#circle03 > .bg-circle, #circle03 > .bg-circle-back", {
+            delay: 0.5,
+            duration: 0.5,
+            opacity: 1,
+            scale: 0.1,
+            y: '200%',
+          })
+          .to("#circle03 > .bg-circle", {
+            // x: '100%',
+            opacity: 0,
+            duration: 0.5,
+            scale: 3.0,
+          })
+          .to("#circle03 > .bg-circle-back", {
+            // x: '100%',
+            duration: 0.5,
+            scale: 3.0,
+          }, "<")
+
+      gsap
+          .timeline({
+            defaults: {
+              ease: "power2.out", duration: 1
+            }, // timelineのプロパティ
+            scrollTrigger: {
+              // markers: true, // マーカーを表示するか（開発用）
+              trigger: "#circle04", // この要素と交差するとイベントが発火
+              start: "center bottom", // ウィンドウのどの位置を発火の基準点にするか
+              end: "top top", // ウィンドウのどの位置をイベントの終了点にするか
+              // start: 'top bottom',
+              // end: 'bottom top',
+              // toggleActions: "restart none none none", // スクロールイベントで発火するアニメーションの種
+              toggleActions: "play reverse play reverse", // スクロールイベントで発火するアニメーションの種
+              scrub: true, // スクロールに応じて動かす
+              // onScrubComplete: self => {
+              // if(self.progress === 1) {
+              //   self.kill();
+              //   self.set(".bg-circle-01, .bg-circle-02", {
+              //     scale: 0,
+              //   })
+              // }
+              // }
+            },
+          })
+          .from("#circle04 > .bg-circle, #circle04 > .bg-circle-back", {
+            delay: 0.5,
+            duration: 0.5,
+            opacity: 1,
+            scale: 0.1,
+            y: '200%',
+          })
+          .to("#circle04 > .bg-circle", {
+            // x: '100%',
+            opacity: 0,
+            duration: 0.5,
+            scale: 3.0,
+          })
+          .to("#circle04 > .bg-circle-back", {
+            // x: '100%',
+            duration: 0.5,
+            scale: 3.0,
+          }, "<")
+
+      gsap
+          .timeline({
+            defaults: {
+              ease: "power2.out", duration: 1
+            },
+            scrollTrigger: {
+              trigger: "#circle05", // この要素と交差するとイベントが発火
+              start: "center bottom", // ウィンドウのどの位置を発火の基準点にするか
+              end: "top top", // ウィンドウのどの位置をイベントの終了点にするか
+              toggleActions: "play reverse play reverse", // スクロールイベントで発火するアニメーションの種
+              scrub: true, // スクロールに応じて動かす
+            },
+          })
+          .from("#circle05 > .bg-circle, #circle05 > .bg-circle-back", {
+            delay: 0.5,
+            duration: 0.5,
+            opacity: 1,
+            scale: 0.1,
+            y: '200%',
+          })
+          .to("#circle05 > .bg-circle", {
+            // x: '100%',
+            opacity: 0,
+            duration: 0.5,
+            scale: 3.0,
+          })
+          .to("#circle05 > .bg-circle-back", {
+            duration: 0.5,
+            scale: 3.0,
+          }, "<")
+
+      gsap
+          .timeline({
+            defaults: {
+              ease: "power2.out", duration: 1
+            },
+            scrollTrigger: {
+              trigger: "#circle06", // この要素と交差するとイベントが発火
+              start: "center bottom", // ウィンドウのどの位置を発火の基準点にするか
+              end: "top top", // ウィンドウのどの位置をイベントの終了点にするか
+              toggleActions: "play reverse play reverse", // スクロールイベントで発火するアニメーションの種
+              scrub: true, // スクロールに応じて動かす
+            },
+          })
+          .from("#circle06 > .bg-circle, #circle06 > .bg-circle-back", {
+            delay: 0.5,
+            duration: 0.5,
+            opacity: 1,
+            scale: 0.1,
+            y: '200%',
+          })
+          .to("#circle06 > .bg-circle", {
+            // x: '100%',
+            opacity: 0,
+            duration: 0.5,
+            scale: 3.0,
+          })
+          .to("#circle06 > .bg-circle-back", {
+            duration: 0.5,
+            scale: 3.0,
+          }, "<")
+
+      gsap
+          .timeline({
+            defaults: {
+              ease: "power2.out", duration: 1
+            },
+            scrollTrigger: {
+              trigger: "#circle07", // この要素と交差するとイベントが発火
+              start: "center bottom", // ウィンドウのどの位置を発火の基準点にするか
+              end: "top top", // ウィンドウのどの位置をイベントの終了点にするか
+              toggleActions: "play reverse play reverse", // スクロールイベントで発火するアニメーションの種
+              scrub: true, // スクロールに応じて動かす
+            },
+          })
+          .from("#circle07 > .bg-circle, #circle07 > .bg-circle-back", {
+            delay: 0.5,
+            duration: 0.5,
+            opacity: 1,
+            scale: 0.1,
+            y: '200%',
+          })
+          .to("#circle07 > .bg-circle", {
+            // x: '100%',
+            opacity: 0,
+            duration: 0.5,
+            scale: 3.0,
+          })
+          .to("#circle07 > .bg-circle-back", {
+            duration: 0.5,
+            scale: 3.0,
+          }, "<")
+
+      gsap
+          .timeline({
+            defaults: {
+              ease: "power2.out", duration: 1
+            },
+            scrollTrigger: {
+              trigger: "#circle08", // この要素と交差するとイベントが発火
+              start: "center bottom", // ウィンドウのどの位置を発火の基準点にするか
+              end: "top top", // ウィンドウのどの位置をイベントの終了点にするか
+              toggleActions: "play reverse play reverse", // スクロールイベントで発火するアニメーションの種
+              scrub: true, // スクロールに応じて動かす
+            },
+          })
+          .from("#circle08 > .bg-circle, #circle08 > .bg-circle-back", {
+            delay: 0.5,
+            duration: 0.5,
+            opacity: 1,
+            scale: 0.1,
+            y: '200%',
+          })
+          .to("#circle08 > .bg-circle", {
+            // x: '100%',
+            opacity: 0,
+            duration: 0.5,
+            scale: 3.0,
+          })
+          .to("#circle08 > .bg-circle-back", {
+            duration: 0.5,
+            scale: 3.0,
+          }, "<")
+
+      gsap
+          .timeline({
+            defaults: {
+              ease: "power2.out", duration: 1
+            },
+            scrollTrigger: {
+              trigger: "#circle09", // この要素と交差するとイベントが発火
+              start: "center bottom", // ウィンドウのどの位置を発火の基準点にするか
+              end: "top top", // ウィンドウのどの位置をイベントの終了点にするか
+              toggleActions: "play reverse play reverse", // スクロールイベントで発火するアニメーションの種
+              scrub: true, // スクロールに応じて動かす
+            },
+          })
+          .from("#circle09 > .bg-circle, #circle09 > .bg-circle-back", {
+            delay: 0.5,
+            duration: 0.5,
+            opacity: 1,
+            scale: 0.1,
+            y: '200%',
+          })
+          .to("#circle09 > .bg-circle", {
+            // x: '100%',
+            opacity: 0,
+            duration: 0.5,
+            scale: 3.0,
+          })
+          .to("#circle09 > .bg-circle-back", {
+            duration: 0.5,
+            scale: 3.0,
+          }, "<")
+
+
 
     }, // scrollAnimation
 
@@ -401,7 +644,25 @@ export default {
   width: 100%;
 }
 
-.object-cover {
+.gray-circle01 {
+  width: 60vw;
+  height: 60vw;
+  background-image: url("@/assets/photos/_DSC1707.jpg");
+  background-size: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+  pointer-events: none;
+}
+.gray-circle02 {
+  width: 60vw;
+  height: 60vw;
+  background-image: url("@/assets/photos/_DSC1146.jpg");
+  background-size: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+  pointer-events: none;
+}
+.gray-circle03 {
   width: 60vw;
   height: 60vw;
   background-image: url("@/assets/photos/_DSC1707.jpg");
@@ -490,4 +751,60 @@ ul#polaroids li a:hover {
   transform: scale(1.25);
   z-index: 6;
 }
+
+.bg-circle-container {
+  height: 100%;
+  width: 100vw;
+  position: relative;
+}
+.bg-circle {
+  border-radius: 50%;
+  height: 50vmax;
+  margin: 0 auto;
+  pointer-events: none;
+  right: -6vw;
+  top: 5vh;
+  width: 50vmax;
+  z-index: -1;
+}
+.bg-circle-03 {
+  background-image: url("@/assets/photos/_DSC2946.jpg");
+  background-size: cover;
+}
+.bg-circle-04 {
+  background-image: url("@/assets/photos/_DSC0890.jpg");
+  background-size: cover;
+}
+.bg-circle-05 {
+  background-image: url("@/assets/photos/_DSC2313.jpg");
+  background-size: cover;
+}
+.bg-circle-06 {
+  background-image: url("@/assets/photos/_DSC2313.jpg");
+  background-size: cover;
+}
+.bg-circle-07 {
+  background-image: url("@/assets/photos/_DSC2313.jpg");
+  background-size: cover;
+}
+.bg-circle-08 {
+  background-image: url("@/assets/photos/_DSC2313.jpg");
+  background-size: cover;
+}
+.bg-circle-09 {
+  background-image: url("@/assets/photos/_DSC2313.jpg");
+  background-size: cover;
+}
+.bg-circle-back {
+  border-radius: 50%;
+  height: 50vmax;
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  width: 50vmax;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
 </style>

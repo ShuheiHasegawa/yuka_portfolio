@@ -44,6 +44,9 @@ export default defineNuxtConfig({
                 // <meta name="description" content="My amazing site">
                 { name: "Yuka Kohinata", content: "Yuka Kohinata Profile" },
             ],
+            link: [
+                { rel: "icon", type: "image/png", href: "/favicon.ico" },
+            ],
             script:[
                 { src: 'https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js', defer: true },
             ]
