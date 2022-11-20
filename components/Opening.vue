@@ -3,19 +3,18 @@
       <div class="title-area">
         <h1 class="title">
           <span>Y</span>
-          <span>U</span>
-          <span>K</span>
-          <span>A</span>
-  <!--        <span>&nbsp</span>-->
+          <span>u</span>
+          <span>k</span>
+          <span>a</span>
           <br>
           <span>K</span>
-          <span>O</span>
-          <span>H</span>
-          <span>I</span>
-          <span>N</span>
-          <span>A</span>
-          <span>T</span>
-          <span>A</span>
+          <span>o</span>
+          <span>h</span>
+          <span>i</span>
+          <span>n</span>
+          <span>a</span>
+          <span>t</span>
+          <span>a</span>
         </h1>
       </div>
     </div>

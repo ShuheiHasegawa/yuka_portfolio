@@ -1,32 +1,38 @@
 <template>
   <div class="relative">
 
-    <div class="half-circle"></div>
-
-    <div class="text">
-      <p>I love goats.</p>
-      <p>I love parfaits.</p>
+    <div class="goat-front-area">
+      <div class="w-screen flex justify-center items-center">
+        <figure class="goat-front-img">
+          <img src="@/assets/photos/_DSC3864.jpg"/>
+        </figure>
+      </div>
     </div>
 
-    <div class="bottom-area">
-      <p>
-        I am a Japanese gravure idol and fashion model.
-        Belongs to CONPASS.
-      </p>
+    <div class="half-circle-area">
+      <div class="half-circle"></div>
+    </div>
 
-      <figure class="goat-front-img">
-        <img src="@/assets/photos/_DSC3864.jpg"/>
-      </figure>
-
-      <figure class="goat-back-img">
-        <img src="@/assets/photos/_DSC3864.jpg"/>
-      </figure>
-
-      <div class="footer-text">
+    <div class="profile-area h-screen flex justify-center items-center">
+      <div class="text">
+<!--        <p>I love goats.</p>-->
+<!--        <p>I love parfaits.</p>-->
         <p>
-          Yuka<br>Kohinata
+          I am a Japanese gravure idol and fashion model.
+          <br>
+          Belongs to CONPASS.
         </p>
       </div>
+    </div>
+
+    <div class="bottom-area h-screen w-screen flex justify-center items-center">
+      <div class="goat-back-img">
+        <img src="@/assets/photos/_DSC3864.jpg"/>
+      </div>
+    </div>
+
+    <div class="footer-text">
+      YUKA<br>KOHINATA
     </div>
 
   </div>
@@ -39,24 +45,17 @@ export default {
 </script>
 
 <style scoped>
-.relative {
-  background-color: white;
+.half-circle-area {
+  overflow: hidden;
 }
 
 .half-circle {
   background: #FEACB7;
-  /*border-radius: 50%;*/
-  /*bottom: -50vmax;*/
-  /*height: 100vh;*/
-  /*width: 100vw;*/
-  /*position: absolute;*/
-  /*pointer-events: none;*/
-
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-  height: 360px;
-  /*margin-left: -100px;*/
-  /*margin-right: -100px;*/
+  height: 200px;
+  margin-left: -100px;
+  margin-right: -100px;
   padding-left: 100px;
   padding-right: 100px;
 }
@@ -65,18 +64,18 @@ export default {
   margin: 0 auto;
   position: absolute;
   text-align: center;
-  /*padding: 4em;*/
-  font-size: 2em;
   color: #d32254;
 }
 
-.bottom-area {
-  position: absolute;
-  height: 75vmax;
-  width: 100%;
-  /*width: 100vmax;*/
+.profile-area {
+  height: 30vmax;
   background: #FEACB7;
-  /*bottom: 0;*/
+}
+
+.bottom-area {
+  /*position: absolute;*/
+  height: 60vmax;
+  background: #FEACB7;
 }
 
 .bottom-area p {
@@ -89,20 +88,12 @@ export default {
 
 .text {
   color: #d32254;
-  display: block;
-  position: absolute;
   font-size: 2em;
-  width: 100%;
-  bottom: 200px;
-  text-align: center;
+  padding: 0 2em 0 2em;
 }
 
-.footer-text {
-  display: block;
-  position: absolute;
-  font-size: 1.8em;
-  width: 100%;
-  bottom: 1em;
+.goat-front-area {
+  height: 60vmax;
 }
 
 .goat-front-img {
@@ -115,6 +106,8 @@ export default {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: 3% 0;
   -webkit-mask-size: auto 100%;
+  margin: 0 auto;
+  width: 512px;
 }
 
 .goat-back-img {
@@ -127,5 +120,18 @@ export default {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: 3% 0;
   -webkit-mask-size: auto 100%;
+  margin: 0 auto;
+  width: 512px;
 }
+
+.footer-text {
+  background: #FEACB7;
+  color: #d32254;
+  font-size: 2em;
+  /*height: 20vmax;*/
+  padding: 1em 0 1em 0;
+  width: 100%;
+  text-align: center;
+}
+
 </style>

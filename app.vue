@@ -1,11 +1,19 @@
 <template>
   <div id="smooth-wrapper">
     <div id="smooth-content">
-      <div class="relative">
+      <div class="layout-container relative">
         <Opening/>
         <Header/>
-  <!--      <Banner/>-->
+        <!--      <Banner/>-->
         <Panels/>
+        <div class="color-one"></div>
+        <div class="color-two"></div>
+        <div class="color-three"></div>
+        <div class="color-four"></div>
+        <div class="color-five"></div>
+        <div class="color-six"></div>
+        <div class="color-seven"></div>
+        <div class="color-eight"></div>
         <Footer/>
       </div>
     </div>
@@ -51,6 +59,11 @@ body {
   overflow: hidden;
 }
 
+.layout-container {
+  width: 100vw;
+  overflow: hidden;
+}
+
 .dark-mode body {
   background-color: #091a28;
   color: #ebf4f1;
@@ -80,5 +93,38 @@ body {
 
 .purple-theme {
   background-color: mediumpurple;
+}
+
+.color-one {
+  background-color: #F4EEE7;
+  height: 20vh;
+}
+.color-two {
+  background-color: #FFAA73;
+  /*height: 20vh;*/
+}
+.color-three {
+  background-color: #EFE7DF;
+  height: 20vh;
+}
+.color-four {
+  background-color: #C1E1E9;
+  height: 20vh;
+}
+.color-five {
+  background-color: #FF849E;
+  height: 20vh;
+}
+.color-six {
+  background-color: #846A6A;
+  height: 20vh;
+}
+.color-seven {
+  background-color: #E0ABF2;
+  height: 20vh;
+}
+.color-eight {
+  background-color: #C7E5D5;
+  height: 20vh;
 }
 </style>

@@ -5,13 +5,7 @@
       <h2 class="loader--text">100%</h2>
     </div>
   </div>
-  <div class="demo-wrapper">
-    <header class="df aic jcc">
-      <div>
-<!--        <h1>ScrollTrigger</h1>-->
-<!--        <h2>demo</h2>-->
-      </div>
-    </header>
+  <div class="scroll-wrapper">
     <section class="demo-text">
       <div class="wrapper text" style="translate: none; rotate: none; scale: none; transform: translate3d(-1978.03px, 0px, 0px);">
         YUKA&nbsp;KOHINATA&nbsp;YUKA&nbsp;KOHINATA
@@ -80,9 +74,6 @@
         YUKA&nbsp;KOHINATA&nbsp;YUKA&nbsp;KOHINATA
       </div>
     </section>
-    <footer class="df aic jcc">
-      <p>Images from <a href="https://unsplash.com/">Unsplash</a></p>
-    </footer>
   </div>
 </template>
 
@@ -173,9 +164,6 @@ li {
   padding-right: 1rem;
 }
 
-header {height: 100vh}
-footer {height: 50vh}
-
 :any-link { color: #4e9815; }
 
 .df {display: flex}
@@ -192,7 +180,7 @@ footer {height: 50vh}
   color: white;
 }
 
-.demo-wrapper {
+.scroll-wrapper {
   overflow-x: hidden;
 }
 
@@ -201,10 +189,8 @@ footer {height: 50vh}
 }
 
 .demo-gallery img {
-  /*height: 600px;*/
-  /*width: 600px;*/
-  height: 600px;
-  width: 600px;
+  height: 50vmax;
+  width: 50vmax;
   border-radius: 50%;
   margin-top: 2em;
   margin-bottom: 2em;

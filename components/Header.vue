@@ -53,7 +53,7 @@
       <!-- ヘッダー -->
       <header class="c-header js-header">
         <div class="theme-select c-temp">
-          <h1 class="flex justify-center gap-4">
+          <h1 class="flex justify-center gap-4 theme-btns">
             <div
                 class="rounded-full h-20 w-20 light-theme text-center"
                 @click="$colorMode.preference = 'light'"
@@ -566,7 +566,7 @@ export default {
               ease: "power2.out", duration: 1
             }, // timelineのプロパティ
             scrollTrigger: {
-              markers: true, // マーカーを表示するか（開発用）
+              // markers: true, // マーカーを表示するか（開発用）
               trigger: ".second", // この要素と交差するとイベントが発火
               start: "top center", // ウィンドウのどの位置を発火の基準点にするか
               // start: "center top", // ウィンドウのどの位置を発火の基準点にするか
@@ -733,6 +733,41 @@ export default {
           console.log("drag ended");
         }
       });
+
+      gsap
+          .timeline({
+            defaults: {
+              ease: "power2.out", duration: 1
+            }, // timelineのプロパティ
+            scrollTrigger: {
+              // markers: true, // マーカーを表示するか（開発用）
+              trigger: ".bg-circle-01", // この要素と交差するとイベントが発火
+              start: "center bottom", // ウィンドウのどの位置を発火の基準点にするか
+              end: "center top", // ウィンドウのどの位置をイベントの終了点にするか
+              // toggleActions: "restart none none none", // スクロールイベントで発火するアニメーションの種
+              toggleActions: "play reverse play reverse", // スクロールイベントで発火するアニメーションの種
+              scrub: true, // スクロールに応じて動かす
+              // onScrubComplete: self => {
+              // if(self.progress === 1) {
+              //   self.kill();
+              //   self.set(".bg-circle-01, .bg-circle-02", {
+              //     scale: 0,
+              //   })
+              // }
+              // }
+            },
+          })
+          .from(".bg-circle-01", {
+            delay: 0.5,
+            duration: 0.5,
+            opacity: 1,
+            scale:1,
+          })
+          .to(".bg-circle-01", {
+            duration: 0.5,
+            scale: 1.5,
+          })
+
     }
   }
 }
@@ -744,7 +779,7 @@ export default {
   /*width: 100vw;*/
 }
 .main {
-  height: 100vh;
+  /*height: 100vh;*/
   width: 100vw;
   /*width: 390px;*/
   overflow: hidden;
@@ -752,11 +787,15 @@ export default {
 }
 .c-header {
   position: absolute;
+  z-index: 9;
 }
 .theme-select {
   /*position: absolute;*/
   /*text-align: center;*/
   /*margin: 0 auto;*/
+}
+.theme-btns div {
+  cursor: pointer;
 }
 .theme-text {
   line-height: 4em;
@@ -815,9 +854,9 @@ export default {
   background-image: url("@/assets/photos/_DSC3634.jpg");
   background-size: cover;
   position: absolute;
-  z-index: -1;
-  /*top: 35vh;*/
-  left: -36vw;
+  z-index: -2;
+  top: 10vh;
+  left: -40vw;
   width: 70vh;
   height: 70vh;
   border-radius: 50%;
@@ -828,10 +867,10 @@ export default {
   background-image: url("@/assets/photos/_DSC3409.jpg");
   background-size: cover;
   position: absolute;
-  z-index: -2;
-  right: -25vw;
-  width: 45vh;
-  height: 45vh;
+  z-index: -1;
+  right: -15vw;
+  width: 25vh;
+  height: 25vh;
   border-radius: 50%;
   pointer-events: none;
 }
@@ -841,7 +880,7 @@ export default {
     background-image: url("@/assets/photos/_DSC3634.jpg");
     background-size: cover;
     position: absolute;
-    z-index: -1;
+    z-index: -2;
     bottom: 20vh;
     left: -16vw;
     width: 80vmax;
@@ -854,7 +893,7 @@ export default {
     background-image: url("@/assets/photos/_DSC3409.jpg");
     background-size: cover;
     position: absolute;
-    z-index: -2;
+    z-index: -1;
     top: 5vh;
     right: -6vw;
     width: 50vmax;
@@ -862,6 +901,7 @@ export default {
     border-radius: 50%;
     pointer-events: none;
   }
+
 }
 
 .c-loader-bg {
