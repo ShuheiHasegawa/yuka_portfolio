@@ -274,6 +274,7 @@ export default {
               // toggleActions: "restart none none none", // スクロールイベントで発火するアニメーションの種
               toggleActions: "play reverse play reverse", // スクロールイベントで発火するアニメーションの種
               scrub: true, // スクロールに応じて動かす
+              // pin: true,
               // onScrubComplete: self => {
               // if(self.progress === 1) {
               //   self.kill();

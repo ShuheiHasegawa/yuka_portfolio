@@ -66,9 +66,44 @@ body {
   color: #433422;
 }
 
-.purple-mode body {
-  background-color: mediumpurple;
-  color: white;
+.color-one-mode body {
+  background-color: #F4EEE7;
+  color: #433422;
+}
+
+.color-two-mode body {
+  background-color: #FFAA73;
+  color: #433422;
+}
+
+.color-three-mode body {
+  background-color: #EFE7DF;
+  color: #433422;
+}
+
+.color-four-mode body {
+  background-color: #C1E1E9;
+  color: #433422;
+}
+
+.color-five-mode body {
+  background-color: #FF849E;
+  color: #433422;
+}
+
+.color-six-mode body {
+  background-color: #846A6A;
+  color: #433422;
+}
+
+.color-seven-mode body {
+  background-color: #E0ABF2;
+  color: #433422;
+}
+
+.color-eight-mode body {
+  background-color: #C7E5D5;
+  color: #433422;
 }
 
 .light-theme {
@@ -83,8 +118,36 @@ body {
   background-color: #f1e7d0;
 }
 
-.purple-theme {
-  background-color: mediumpurple;
+.color-one-theme {
+  background-color: #F4EEE7;
+}
+
+.color-two-theme {
+  background-color: #FFAA73;
+}
+
+.color-three-theme {
+  background-color: #EFE7DF;
+}
+
+.color-four-theme {
+  background-color: #C1E1E9;
+}
+
+.color-five-theme {
+  background-color: #FF849E;
+}
+
+.color-six-theme {
+  background-color: #846A6A;
+}
+
+.color-seven-theme {
+  background-color: #E0ABF2;
+}
+
+.color-eight-theme {
+  background-color: #C7E5D5;
 }
 
 .color-one {

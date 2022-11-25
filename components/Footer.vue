@@ -6,7 +6,7 @@
       <div class="color-two"></div>
       <div class="color-three"></div>
       <div class="color-four">
-        <div class="message">
+        <div class="message text-love-goats">
           <p>I love goats.</p>
         </div>
       </div>
@@ -20,7 +20,7 @@
       <div class="color-six"></div>
       <div class="color-seven"></div>
       <div class="color-eight">
-        <div class="message">
+        <div class="message text-love-parfaits">
           <p>I love parfaits.</p>
         </div>
       </div>
@@ -39,40 +39,45 @@
 <!--    </div>-->
 
     <div class="mt-64">
-    <div class="half-circle-area">
-      <div class="half-circle"></div>
-    </div>
-
-    <div class="profile-area h-screen flex justify-center items-center pt-16">
-      <div class="text">
-        <p>
-          I am a Japanese gravure idol and fashion model.
-          <br>
-          Belongs to CONPASS.
-        </p>
+      <div class="half-circle-area">
+        <div class="half-circle"></div>
       </div>
     </div>
-    </div>
 
-<!--    <div class="bottom-area h-screen w-screen flex justify-center items-center">-->
-<!--      <div>-->
-<!--        <div class="goat-back-img">-->
-<!--          <img src="@/assets/photos/_DSC3864.jpg"/>-->
-<!--        </div>-->
-<!--&lt;!&ndash;        <div class="goat-back-img1">&ndash;&gt;-->
-<!--&lt;!&ndash;          <img src="@/assets/photos/goat/original/AdobeStock_429046237.png"/>&ndash;&gt;-->
-<!--&lt;!&ndash;        </div>&ndash;&gt;-->
-<!--      </div>-->
-<!--    </div>-->
+    <div class="one-page bg-profile">
+      <div class="sign-area">
+        <img src="@/assets/photos/draw/draw_goat.png"/>
+      </div>
+<!--      <div class="profile-area h-screen flex justify-center items-center">-->
+      <div class="profile-area">
+        <div class="text text-profile">
+          <p>
+            I am a Japanese gravure idol and fashion model.
+            <br>
+            Belongs to CONPASS.
+          </p>
+        </div>
+        </div>
+      </div>
 
-    <div class="footer-text">
-      YUKA<br>KOHINATA
+    <div class="one-page bg-profile">
+      <div class="sign-area">
+        <img src="@/assets/photos/draw/draw_sign.png"/>
+      </div>
+
+      <div class="footer-area">
+        <div class="text-footer">
+          Yuka<br>Kohinata
+        </div>
+      </div>
     </div>
 
   </div>
 </template>
 
 <script>
+import gsap from "gsap"
+
 export default {
   name: "Footer",
   mounted() {
@@ -83,16 +88,70 @@ export default {
 
       gsap.timeline({
         scrollTrigger: {
-          trigger: ".box2",
+          trigger: ".stripe-panel1",
           start: "center center",
           end: "bottom top",
           // markers: true,
           scrub: true,
-          pin: true,
+          // pin: true,
         }
       })
-          .from(".text4", {x: innerWidth * 1, opacity: 0})
-          .from(".text5", {x: innerWidth * 1, opacity: 0})
+          .from(".text-love-goats", {
+            rotate: -10
+          })
+          .to(".text-love-goats", {
+            rotate: 0
+          })
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".stripe-panel2",
+          start: "center center",
+          end: "bottom top",
+          // markers: true,
+          scrub: true,
+          // pin: true,
+        }
+      })
+          .from(".text-love-parfaits", {
+            rotate: -10
+          })
+          .to(".text-love-parfaits", {
+            rotate: 0
+          })
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".profile-area",
+          start: "top bottom",
+          markers: true,
+          scrub: true,
+          // pin: true,
+        }
+      })
+          .from(".text-profile", {
+            rotate: -10
+          })
+          .to(".text-profile", {
+            rotate: 0
+          })
+
+      // gsap.timeline({
+      //   scrollTrigger: {
+      //     trigger: ".footer-area",
+      //     start: "top bottom",
+      //     markers: true,
+      //     scrub: true,
+      //     // pin: true,
+      //   }
+      // })
+      //     .from(".text-footer", {
+      //       y: -window.innerHeight
+      //     })
+      //     .to(".text-footer", {
+      //       y: window.innerHeight
+      //     })
+
     }
   }
 }
@@ -122,25 +181,6 @@ export default {
   color: #d32254;
 }
 
-.profile-area {
-  height: 30vmax;
-  background: #FEACB7;
-}
-
-.bottom-area {
-  /*position: absolute;*/
-  height: 100vmax;
-  background: #FEACB7;
-}
-
-.bottom-area p {
-  text-align: center;
-  /*padding-left: 4em;*/
-  /*padding-right: 4em;*/
-  font-size: 2em;
-  color: #d32254;
-}
-
 .text {
   color: #d32254;
   font-size: 2em;
@@ -166,7 +206,7 @@ export default {
   width: 512px;
   /* top と left に 50% を指定して、要素の左上を中央にする. */
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   /* 要素の大きさの半分をネガティブマージンとすることで、要素を画面中央にする. */
   margin-top: -385px;
@@ -187,7 +227,7 @@ export default {
   width: 512px;
   /* top と left に 50% を指定して、要素の左上を中央にする. */
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   /* 要素の大きさの半分をネガティブマージンとすることで、要素を画面中央にする. */
   margin-top: -385px;
@@ -197,16 +237,6 @@ export default {
   /*マスクレイヤーとして使用する画像*/
   margin: 0 auto;
   width: 512px;
-}
-
-.footer-text {
-  background: #FEACB7;
-  color: #d32254;
-  font-size: 2em;
-  /*height: 20vmax;*/
-  padding: 1em 0 2em 0;
-  width: 100%;
-  text-align: center;
 }
 
 .stripe-panel1 {
@@ -223,10 +253,57 @@ export default {
 }
 .message {
   color: #d32254;
-  font-size: 3em;
+  font-size: 2em;
   position: absolute;
   bottom: 10vh;
   text-align: center;
   width: 100%;
 }
+
+.bg-profile {
+  background-color: #FEACB7;
+}
+
+.one-page {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.sign-area {
+  position: absolute;
+  height: 84vh;
+  width: 100%;
+  top: 30vh;
+  background-color: #FEACB7;
+}
+.sign-area > img {
+  height: 30vh;
+  margin: 0 auto;
+}
+
+.profile-area {
+  position: absolute;
+  height: 16vh;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-area {
+  position: absolute;
+  height: 16vh;
+  width: 100%;
+  bottom: 6vh;
+}
+
+.text-footer {
+  background: #FEACB7;
+  color: #d32254;
+  font-size: 2em;
+  padding: 1em 0 2em 0;
+  width: 100%;
+  text-align: center;
+}
+
 </style>
