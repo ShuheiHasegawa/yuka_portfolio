@@ -6,12 +6,12 @@
     </div>
   </div>
   <div class="scroll-wrapper">
-    <section class="demo-text">
+    <section class="scroll-text" style="margin-bottom: 10vh">
       <div class="wrapper text" style="translate: none; rotate: none; scale: none; transform: translate3d(-1978.03px, 0px, 0px);">
-        YUKA&nbsp;KOHINATA&nbsp;YUKA&nbsp;KOHINATA
+        Yuka&nbsp;Kohinata&nbsp;Yuka&nbsp;Kohinata
       </div>
     </section>
-    <section class="demo-gallery">
+    <section class="scroll-gallery">
       <ul class="wrapper" style="translate: none; rotate: none; scale: none; transform: translate3d(1362.08px, 0px, 0px);">
         <li>
           <img src="https://source.unsplash.com/random/1240x874?sig=134" width="1240">
@@ -24,7 +24,7 @@
         </li>
       </ul>
     </section>
-    <section class="demo-gallery">
+    <section class="scroll-gallery">
       <ul class="wrapper" style="translate: none; rotate: none; scale: none; transform: translate(-2416px, 0px);">
         <li>
           <img src="https://source.unsplash.com/random/1240x874?sig=195" width="1240">
@@ -37,7 +37,7 @@
         </li>
       </ul>
     </section>
-    <section class="demo-gallery">
+    <section class="scroll-gallery">
       <ul class="wrapper" style="translate: none; rotate: none; scale: none; transform: translate(100%, 0px);">
         <li>
           <img src="https://source.unsplash.com/random/1240x874?sig=6" width="1240">
@@ -53,7 +53,7 @@
         </li>
       </ul>
     </section>
-    <section class="demo-gallery">
+    <section class="scroll-gallery">
       <ul class="wrapper" style="translate: none; rotate: none; scale: none; transform: translate(-3216px, 0px);">
         <li>
           <img src="https://source.unsplash.com/random/1240x874?sig=40" width="1240">
@@ -69,9 +69,9 @@
         </li>
       </ul>
     </section>
-    <section class="demo-text">
+    <section class="scroll-text">
       <div class="wrapper text" style="translate: none; rotate: none; scale: none; transform: translate(100%, 0px);">
-        YUKA&nbsp;KOHINATA&nbsp;YUKA&nbsp;KOHINATA
+        Yuka&nbsp;Kohinata&nbsp;Yuka&nbsp;Kohinata
       </div>
     </section>
   </div>
@@ -181,14 +181,14 @@ li {
 }
 
 .scroll-wrapper {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .wrapper {
   display: flex;
 }
 
-.demo-gallery img {
+.scroll-gallery img {
   height: 50vmax;
   width: 50vmax;
   border-radius: 50%;
@@ -196,12 +196,13 @@ li {
   margin-bottom: 2em;
 }
 
-.demo-gallery:not(.last) {
+.scroll-gallery:not(.last) {
   /*height: 100%;*/
   padding-bottom: 1rem;
 }
 
-.demo-text .text {
+.scroll-text .text {
+  color: #d32254;
   font-size: clamp(8rem, 15vw, 16rem);
   line-height: 1;
   font-weight: 900;

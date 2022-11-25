@@ -13,7 +13,8 @@
 <!--  </svg>-->
 <!--  <div id="content"></div>-->
 
-  <section class="js-mv main">
+  <section class="top-container">
+    <div class="enable-drag-container my-8">
     <!--ここからtransitionコードを開始-->
 <!--    <transition-->
 <!--        appear-->
@@ -51,28 +52,28 @@
 <!--      </div>-->
 
       <!-- ヘッダー -->
-      <header class="c-header js-header">
-        <div class="theme-select c-temp">
-          <h1 class="flex justify-center gap-4 theme-btns">
-            <div
-                class="rounded-full h-20 w-20 light-theme text-center"
-                @click="$colorMode.preference = 'light'"
-            ><span class="text-black theme-text">Light</span></div>
-            <div
-                class="rounded-full h-20 w-20 dark-theme text-center"
-                @click="$colorMode.preference = 'dark'"
-            ><span class="text-white theme-text">Dark</span></div>
-            <div
-                class="rounded-full h-20 w-20 sepia-theme text-center"
-                @click="$colorMode.preference = 'sepia'"
-            ><span class="text-black theme-text">Sepia</span></div>
-            <div
-                class="rounded-full h-20 w-20 light-theme text-center"
-                @click="$colorMode.preference = 'purple'"
-            ><span class="text-black theme-text">Purple</span></div>
-          </h1>
-        </div><!-- /header -->
-      </header>
+<!--      <header class="c-header js-header">-->
+<!--        <div class="theme-select c-temp">-->
+<!--          <h1 class="flex justify-center gap-4 theme-btns">-->
+<!--            <div-->
+<!--                class="rounded-full h-20 w-20 light-theme text-center"-->
+<!--                @click="$colorMode.preference = 'light'"-->
+<!--            ><span class="text-black theme-text">Light</span></div>-->
+<!--            <div-->
+<!--                class="rounded-full h-20 w-20 dark-theme text-center"-->
+<!--                @click="$colorMode.preference = 'dark'"-->
+<!--            ><span class="text-white theme-text">Dark</span></div>-->
+<!--            <div-->
+<!--                class="rounded-full h-20 w-20 sepia-theme text-center"-->
+<!--                @click="$colorMode.preference = 'sepia'"-->
+<!--            ><span class="text-black theme-text">Sepia</span></div>-->
+<!--            <div-->
+<!--                class="rounded-full h-20 w-20 light-theme text-center"-->
+<!--                @click="$colorMode.preference = 'purple'"-->
+<!--            ><span class="text-black theme-text">Purple</span></div>-->
+<!--          </h1>-->
+<!--        </div>&lt;!&ndash; /header &ndash;&gt;-->
+<!--      </header>-->
 
       <div class="bg-circle-01"></div>
       <div class="bg-circle-02"></div>
@@ -95,139 +96,162 @@
       </label>
     </div>
 
-          <!-- 丸い図形 -->
-          <div class="c-mv_bubble js-mv-bubble">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1324 768">
-              <defs>
-                  <linearGradient v-for="(bubble, index) in bubbleList"
-                      :id="'bubble_' + index"
-                      :data-name="'bubble_' + index"
-                      :x1="bubble.x1"
-                      :y1="bubble.y1"
-                      :x2="bubble.x2"
-                      :y2="bubble.y2"
-                      :gradientTransform="bubble.gradientTransform"
-                      gradientUnits="userSpaceOnUse">
-                    <stop offset="0" :stop-color="bubble.color1"/>
-                    <stop offset="1" :stop-color="bubble.color2"/>
-                  </linearGradient>
+      <!-- 丸い図形 -->
+      <div class="bubble-group js-mv-bubble">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1324 768">
+          <defs>
+<!--              <linearGradient v-for="(bubble, index) in bubbleList"-->
+<!--                  :id="'bubble_' + index"-->
+<!--                  :data-name="'bubble_' + index"-->
+<!--                  :x1="bubble.x1"-->
+<!--                  :y1="bubble.y1"-->
+<!--                  :x2="bubble.x2"-->
+<!--                  :y2="bubble.y2"-->
+<!--                  :gradientTransform="bubble.gradientTransform"-->
+<!--                  gradientUnits="userSpaceOnUse">-->
+<!--                <stop offset="0" :stop-color="bubble.color1"/>-->
+<!--                <stop offset="1" :stop-color="bubble.color2"/>-->
+<!--              </linearGradient>-->
 
-<!--                <linearGradient id="bubble" y1="496.5" x2="121" y2="496.5" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">-->
-<!--                  <stop offset="0" stop-color="#9796f0"/>-->
-<!--                  <stop offset="1" stop-color="#fbc7d4"/>-->
-<!--                </linearGradient>-->
-<!--                <linearGradient id="bubble_2" data-name="bubble 2" x1="619" y1="576.5" x2="702"-->
-<!--                                y2="576.5" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">-->
-<!--                  <stop offset="0" stop-color="#ddd6f3"/>-->
-<!--                  <stop offset="1" stop-color="#faaca8"/>-->
-<!--                </linearGradient>-->
-<!--                <linearGradient id="bubble_3" data-name="bubble 3" x1="1166" y1="317" x2="1324"-->
-<!--                                y2="317" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">-->
-<!--                  <stop offset="0" stop-color="#6190e8"/>-->
-<!--                  <stop offset="1" stop-color="#a7bfe8"/>-->
-<!--                </linearGradient>-->
-<!--                <linearGradient id="bubble_4" data-name="bubble 4" x1="981" y1="549" x2="1051"-->
-<!--                                y2="549" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">-->
-<!--                  <stop offset="0" stop-color="#feac5e"/>-->
-<!--                  <stop offset="0.5" stop-color="#c779d0"/>-->
-<!--                  <stop offset="1" stop-color="#4bc0c8"/>-->
-<!--                </linearGradient>-->
-<!--                <linearGradient id="bubble_5" data-name="bubble 5" x1="753" y1="495" x2="903"-->
-<!--                                y2="495" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">-->
-<!--                  <stop offset="0" stop-color="#fbed96"/>-->
-<!--                  <stop offset="1" stop-color="#abecd6"/>-->
-<!--                </linearGradient>-->
-<!--                <linearGradient id="bubble_6" data-name="bubble 6" x1="704" y1="219.5" x2="845"-->
-<!--                                y2="219.5" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">-->
-<!--                  <stop offset="0" stop-color="#ffefba"/>-->
-<!--                  <stop offset="1" stop-color="#fff"/>-->
-<!--                </linearGradient>-->
-<!--                <linearGradient id="bubble_7" data-name="bubble 7" x1="965" y1="349" x2="1081"-->
-<!--                                y2="349" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">-->
-<!--                  <stop offset="0" stop-color="#dbe6f6"/>-->
-<!--                  <stop offset="1" stop-color="#c5796d"/>-->
-<!--                </linearGradient>-->
-<!--                <linearGradient id="bubble_8" data-name="bubble 8" x1="169" y1="193.5" x2="382"-->
-<!--                                y2="193.5" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">-->
-<!--                  <stop offset="0" stop-color="#7f7fd5"/>-->
-<!--                  <stop offset="0.5" stop-color="#86a8e7"/>-->
-<!--                  <stop offset="1" stop-color="#91eae4"/>-->
-<!--                </linearGradient>-->
-<!--                <linearGradient id="bubble_9" data-name="bubble 9" x1="476" y1="290" x2="580"-->
-<!--                                y2="290" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">-->
-<!--                  <stop offset="0" stop-color="#efefbb"/>-->
-<!--                  <stop offset="1" stop-color="#d4d3dd"/>-->
-<!--                </linearGradient>-->
-<!--                <linearGradient id="bubble_10" data-name="bubble 10" x1="355" y1="654.5" x2="518"-->
-<!--                                y2="654.5" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">-->
-<!--                  <stop offset="0" stop-color="#c9d6ff"/>-->
-<!--                  <stop offset="1" stop-color="#e2e2e2"/>-->
-<!--                </linearGradient>-->
-<!--                <linearGradient id="bubble_11" data-name="bubble 11" x1="169" y1="696.5" x2="254"-->
-<!--                                y2="696.5" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">-->
-<!--                  <stop offset="0" stop-color="#d9a7c7"/>-->
-<!--                  <stop offset="1" stop-color="#fffcdc"/>-->
-<!--                </linearGradient>-->
-<!--                <linearGradient id="bubble_12" data-name="bubble 12" x1="1039" y1="725.5"-->
-<!--                                x2="1124" y2="725.5" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">-->
-<!--                  <stop offset="0" stop-color="#c9ffbf"/>-->
-<!--                  <stop offset="1" stop-color="#ffafbd"/>-->
-<!--                </linearGradient>-->
-<!--                <linearGradient id="bubble_13" data-name="bubble 13" x1="907" y1="87" x2="1081"-->
-<!--                                y2="87" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">-->
-<!--                  <stop offset="0" stop-color="#e1eec3"/>-->
-<!--                  <stop offset="1" stop-color="#f05053"/>-->
-<!--                </linearGradient>-->
-              </defs>
-              <g id="item14"
-                 @click="$colorMode.preference = 'light'"
-              >
-                <circle class="cls-1" cx="60.5" cy="271.5" r="60.5"/>
-              </g>
-              <g id="item13"
-                 @click="$colorMode.preference = 'light'"
-              >
-                <circle class="cls-2" cx="660.5" cy="191.5" r="41.5"/>
-              </g>
-              <g id="item12">
-                <circle class="cls-3" cx="1245" cy="451" r="79"/>
-              </g>
-              <g id="item11">
-                <circle class="cls-4" cx="1016" cy="219" r="35"/>
-              </g>
-              <g id="item10">
-                <circle class="cls-5" cx="828" cy="273" r="75"/>
-              </g>
-              <g id="item09">
-                <circle class="cls-6" cx="474.5" cy="548.5" r="70.5"/>
-              </g>
-              <g id="item08">
-                <circle class="cls-7" cx="1023" cy="419" r="58"/>
-              </g>
-              <g id="item07">
-                <circle class="cls-8" cx="994" cy="681" r="87"/>
-              </g>
-              <g id="item06">
-                <circle class="cls-9" cx="275.5" cy="574.5" r="106.5"/>
-              </g>
-              <g id="item05">
-                <circle class="cls-10" cx="528" cy="478" r="52"/>
-              </g>
-              <g id="item04">
-                <circle class="cls-11" cx="436.5" cy="113.5" r="81.5"/>
-              </g>
-              <g id="item03">
-                <circle class="cls-12" cx="211.5" cy="71.5" r="42.5"/>
-              </g>
-              <g id="item02">
-                <circle class="cls-13" cx="1081.5" cy="42.5" r="42.5"/>
-              </g>
-              <g id="item01">
-                <path class="cls-14" d="M1081,681a87,87,0,1,1-87-87A87,87,0,0,1,1081,681Z"/>
-              </g>
-            </svg>
-          </div>
+                <linearGradient id="bubble_1" y1="496.5" x2="121" y2="496.5" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#F4EEE7"/>
+                  <stop offset="1" stop-color="#fff"/>
+                </linearGradient>
+                <linearGradient id="bubble_2" data-name="bubble 2" x1="619" y1="576.5" x2="702"
+                                y2="576.5" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#FFAA73"/>
+                  <stop offset="1" stop-color="#fff"/>
+                </linearGradient>
+                <linearGradient id="bubble_3" data-name="bubble 3" x1="1166" y1="317" x2="1324"
+                                y2="317" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#EFE7DF"/>
+                  <stop offset="1" stop-color="#fff"/>
+                </linearGradient>
+                <linearGradient id="bubble_4" data-name="bubble 4" x1="981" y1="549" x2="1051"
+                                y2="549" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#C1E1E9"/>
+                  <stop offset="1" stop-color="#fff"/>
+                </linearGradient>
+                <linearGradient id="bubble_5" data-name="bubble 5" x1="753" y1="495" x2="903"
+                                y2="495" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#FF849E"/>
+                  <stop offset="1" stop-color="#fff"/>
+                </linearGradient>
+                <linearGradient id="bubble_6" data-name="bubble 6" x1="704" y1="219.5" x2="845"
+                                y2="219.5" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#846A6A"/>
+                  <stop offset="1" stop-color="#fff"/>
+                </linearGradient>
+                <linearGradient id="bubble_7" data-name="bubble 7" x1="965" y1="349" x2="1081"
+                                y2="349" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#E0ABF2"/>
+                  <stop offset="1" stop-color="#fff"/>
+                </linearGradient>
+                <linearGradient id="bubble_8" data-name="bubble 8" x1="169" y1="193.5" x2="382"
+                                y2="193.5" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#C7E5D5"/>
+                  <stop offset="1" stop-color="#fff"/>
+                </linearGradient>
+                <linearGradient id="bubble_9" data-name="bubble 9" x1="476" y1="290" x2="580"
+                                y2="290" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#F4EEE7"/>
+                  <stop offset="1" stop-color="#fff"/>
+                </linearGradient>
+                <linearGradient id="bubble_10" data-name="bubble 10" x1="355" y1="654.5" x2="518"
+                                y2="654.5" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#fff"/>
+                  <stop offset="1" stop-color="#FFAA73"/>
+                </linearGradient>
+                <linearGradient id="bubble_11" data-name="bubble 11" x1="169" y1="696.5" x2="254"
+                                y2="696.5" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#EFE7DF"/>
+                  <stop offset="1" stop-color="#fff"/>
+                </linearGradient>
+                <linearGradient id="bubble_12" data-name="bubble 12" x1="1039" y1="725.5"
+                                x2="1124" y2="725.5" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#C1E1E9"/>
+                  <stop offset="1" stop-color="#fff"/>
+                </linearGradient>
+                <linearGradient id="bubble_13" data-name="bubble 13" x1="907" y1="87" x2="1081"
+                                y2="87" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#FF849E"/>
+                  <stop offset="1" stop-color="#fff"/>
+                </linearGradient>
+          </defs>
+          <g id="item1"
+             @click="$colorMode.preference = 'color-one'"
+          >
+            <circle class="cls-1" cx="60.5" cy="271.5" r="60.5"/>
+          </g>
+          <g id="item2"
+             @click="$colorMode.preference = 'color-two'"
+          >
+            <circle class="cls-2" cx="660.5" cy="191.5" r="41.5"/>
+          </g>
+          <g id="item3"
+             @click="$colorMode.preference = 'color-three'"
+          >
+            <circle class="cls-3" cx="1245" cy="451" r="79"/>
+          </g>
+          <g id="item4"
+             @click="$colorMode.preference = 'color-four'"
+          >
+            <circle class="cls-4" cx="1016" cy="219" r="35"/>
+          </g>
+          <g id="item5"
+             @click="$colorMode.preference = 'color-five'"
+          >
+            <circle class="cls-5" cx="828" cy="273" r="75"/>
+          </g>
+          <g id="item06"
+             @click="$colorMode.preference = 'color-six'"
+          >
+            <circle class="cls-6" cx="474.5" cy="548.5" r="70.5"/>
+          </g>
+          <g id="item07"
+             @click="$colorMode.preference = 'color-seven'"
+          >
+            <circle class="cls-7" cx="1023" cy="419" r="58"/>
+          </g>
+          <g id="item08"
+             @click="$colorMode.preference = 'color-eight'"
+          >
+            <circle class="cls-8" cx="994" cy="681" r="87"/>
+          </g>
+          <g id="item09"
+             @click="$colorMode.preference = 'color-one'"
+          >
+            <circle class="cls-9" cx="275.5" cy="574.5" r="106.5"/>
+          </g>
+          <g id="item10"
+             @click="$colorMode.preference = 'color-two'"
+          >
+            <circle class="cls-10" cx="528" cy="478" r="52"/>
+          </g>
+          <g id="item11"
+             @click="$colorMode.preference = 'color-three'"
+          >
+            <circle class="cls-11" cx="36.5" cy="113.5" r="81.5"/>
+          </g>
+          <g id="item12"
+             @click="$colorMode.preference = 'color-four'"
+          >
+            <circle class="cls-12" cx="111.5" cy="71.5" r="42.5"/>
+          </g>
+          <g id="item13"
+             @click="$colorMode.preference = 'color-five'"
+          >
+            <circle class="cls-13" cx="1081.5" cy="42.5" r="42.5"/>
+          </g>
+          <g id="item14"
+             @click="$colorMode.preference = 'color-six'"
+          >
+            <path class="cls-14" d="M1081,681a87,87,0,1,1-87-87A87,87,0,0,1,1081,681Z"/>
+          </g>
+        </svg>
+      </div>
 
+    </div>
   </section>
 </template>
 
@@ -693,7 +717,7 @@ export default {
       // Create Draggable instance
       Draggable.create("#dragGoat1", {
         type: "x,y",
-        bounds: ".main",
+        bounds: ".enable-drag-container",
         // edgeResistance:0.5,
         throwProps: true,
         inertia: true,
@@ -707,7 +731,7 @@ export default {
       });
       Draggable.create("#dragGoat2", {
         type: "x,y",
-        bounds: ".main",
+        bounds: ".enable-drag-container",
         // edgeResistance:0.5,
         throwProps: true,
         inertia: true,
@@ -721,7 +745,7 @@ export default {
       });
       Draggable.create("#dragGoat3", {
         type: "x,y",
-        bounds: ".main",
+        bounds: ".enable-drag-container",
         // edgeResistance:0.5,
         throwProps: true,
         inertia: true,
@@ -774,16 +798,16 @@ export default {
 </script>
 
 <style scoped>
-.l-wrapper {
-  /*height: 100vh;*/
-  /*width: 100vw;*/
-}
-.main {
-  /*height: 100vh;*/
-  width: 100vw;
-  /*width: 390px;*/
+.top-container {
+  height: 125vh;
   overflow: hidden;
   position: relative;
+}
+.enable-drag-container {
+  top: 0;
+  height: 70%;
+  width: 100%;
+  position: absolute;
 }
 .c-header {
   position: absolute;
@@ -857,8 +881,8 @@ export default {
   z-index: -2;
   top: 10vh;
   left: -40vw;
-  width: 70vh;
-  height: 70vh;
+  width: 70vmax;
+  height: 70vmax;
   border-radius: 50%;
   pointer-events: none;
 }
@@ -902,6 +926,10 @@ export default {
     pointer-events: none;
   }
 
+}
+
+.bubble-group > g {
+  cursor: pointer;
 }
 
 .c-loader-bg {
@@ -961,31 +989,31 @@ export default {
 }
 
 .cls-8 {
-  fill: none;
-}
-
-.cls-9 {
   fill: url(#bubble_8);
 }
 
-.cls-10 {
+.cls-9 {
   fill: url(#bubble_9);
 }
 
-.cls-11 {
+.cls-10 {
   fill: url(#bubble_10);
 }
 
-.cls-12 {
+.cls-11 {
   fill: url(#bubble_11);
 }
 
-.cls-13 {
+.cls-12 {
   fill: url(#bubble_12);
 }
 
-.cls-14 {
+.cls-13 {
   fill: url(#bubble_13);
+}
+
+.cls-14 {
+  fill: url(#bubble_14);
 }
 
 
@@ -1088,5 +1116,9 @@ input {
   background-image: url("@/assets/photos/goat/AdobeStock_2433910.jpeg");
   background-size: cover;
   background-position: center;
+}
+
+circle {
+  cursor: pointer;
 }
 </style>

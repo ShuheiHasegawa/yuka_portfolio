@@ -1,51 +1,165 @@
 <template>
   <div class="relative">
 
-    <div class="goat-front-area">
-      <div class="w-screen flex justify-center items-center">
-        <figure class="goat-front-img">
-          <img src="@/assets/photos/_DSC3864.jpg"/>
-        </figure>
+    <div class="stripe-panel1 relative">
+      <div class="color-one"></div>
+      <div class="color-two"></div>
+      <div class="color-three"></div>
+      <div class="color-four">
+        <div class="message text-love-goats">
+          <p>I love goats.</p>
+        </div>
       </div>
-    </div>
-
-    <div class="half-circle-area">
-      <div class="half-circle"></div>
-    </div>
-
-    <div class="profile-area h-screen flex justify-center items-center">
-      <div class="text">
-<!--        <p>I love goats.</p>-->
-<!--        <p>I love parfaits.</p>-->
-        <p>
-          I am a Japanese gravure idol and fashion model.
-          <br>
-          Belongs to CONPASS.
-        </p>
-      </div>
-    </div>
-
-    <div class="bottom-area h-screen w-screen flex justify-center items-center">
-      <div class="goat-back-img">
+      <figure class="goat-front-img">
         <img src="@/assets/photos/_DSC3864.jpg"/>
+      </figure>
+    </div>
+
+    <div class="stripe-panel2 relative">
+      <div class="color-five"></div>
+      <div class="color-six"></div>
+      <div class="color-seven"></div>
+      <div class="color-eight">
+        <div class="message text-love-parfaits">
+          <p>I love parfaits.</p>
+        </div>
+      </div>
+      <figure class="goat-back-img">
+        <img src="@/assets/photos/_DSC3880.jpg"/>
+      </figure>
+    </div>
+
+<!--    <div class="goat-front-area">-->
+<!--      <div class="w-screen flex justify-center items-center">-->
+<!--        <figure class="goat-front-img">-->
+<!--          <img src="@/assets/photos/_DSC3864.jpg"/>-->
+<!--        </figure>-->
+<!--        <img src="@/assets/photos/goat/original/AdobeStock_312826315.png"/>-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <div class="mt-64">
+      <div class="half-circle-area">
+        <div class="half-circle"></div>
       </div>
     </div>
 
-    <div class="footer-text">
-      YUKA<br>KOHINATA
+    <div class="one-page bg-profile">
+      <div class="sign-area">
+        <img src="@/assets/photos/draw/draw_goat.png"/>
+      </div>
+<!--      <div class="profile-area h-screen flex justify-center items-center">-->
+      <div class="profile-area">
+        <div class="text text-profile">
+          <p>
+            I am a Japanese gravure idol and fashion model.
+            <br>
+            Belongs to CONPASS.
+          </p>
+        </div>
+        </div>
+      </div>
+
+    <div class="one-page bg-profile">
+      <div class="sign-area">
+        <img src="@/assets/photos/draw/draw_sign.png"/>
+      </div>
+
+      <div class="footer-area">
+        <div class="text-footer">
+          Yuka<br>Kohinata
+        </div>
+      </div>
     </div>
 
   </div>
 </template>
 
 <script>
+import gsap from "gsap"
+
 export default {
-  name: "Footer"
+  name: "Footer",
+  mounted() {
+    this.scrollAnimation()
+  },
+  methods: {
+    scrollAnimation() {
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".stripe-panel1",
+          start: "center center",
+          end: "bottom top",
+          // markers: true,
+          scrub: true,
+          // pin: true,
+        }
+      })
+          .from(".text-love-goats", {
+            rotate: -10
+          })
+          .to(".text-love-goats", {
+            rotate: 0
+          })
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".stripe-panel2",
+          start: "center center",
+          end: "bottom top",
+          // markers: true,
+          scrub: true,
+          // pin: true,
+        }
+      })
+          .from(".text-love-parfaits", {
+            rotate: -10
+          })
+          .to(".text-love-parfaits", {
+            rotate: 0
+          })
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".profile-area",
+          start: "top bottom",
+          markers: true,
+          scrub: true,
+          // pin: true,
+        }
+      })
+          .from(".text-profile", {
+            rotate: -10
+          })
+          .to(".text-profile", {
+            rotate: 0
+          })
+
+      // gsap.timeline({
+      //   scrollTrigger: {
+      //     trigger: ".footer-area",
+      //     start: "top bottom",
+      //     markers: true,
+      //     scrub: true,
+      //     // pin: true,
+      //   }
+      // })
+      //     .from(".text-footer", {
+      //       y: -window.innerHeight
+      //     })
+      //     .to(".text-footer", {
+      //       y: window.innerHeight
+      //     })
+
+    }
+  }
 }
 </script>
 
-<style scoped>
+<style type="scss" scoped>
 .half-circle-area {
+  height: 10vh;
   overflow: hidden;
 }
 
@@ -67,25 +181,6 @@ export default {
   color: #d32254;
 }
 
-.profile-area {
-  height: 30vmax;
-  background: #FEACB7;
-}
-
-.bottom-area {
-  /*position: absolute;*/
-  height: 60vmax;
-  background: #FEACB7;
-}
-
-.bottom-area p {
-  text-align: center;
-  /*padding-left: 4em;*/
-  /*padding-right: 4em;*/
-  font-size: 2em;
-  color: #d32254;
-}
-
 .text {
   color: #d32254;
   font-size: 2em;
@@ -93,7 +188,8 @@ export default {
 }
 
 .goat-front-area {
-  height: 60vmax;
+  top: 0;
+  position: absolute;
 }
 
 .goat-front-img {
@@ -106,8 +202,15 @@ export default {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: 3% 0;
   -webkit-mask-size: auto 100%;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   width: 512px;
+  /* top と left に 50% を指定して、要素の左上を中央にする. */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  /* 要素の大きさの半分をネガティブマージンとすることで、要素を画面中央にする. */
+  margin-top: -385px;
+  margin-left: -256px;
 }
 
 .goat-back-img {
@@ -120,16 +223,85 @@ export default {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: 3% 0;
   -webkit-mask-size: auto 100%;
+  /*margin: 0 auto;*/
+  width: 512px;
+  /* top と left に 50% を指定して、要素の左上を中央にする. */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  /* 要素の大きさの半分をネガティブマージンとすることで、要素を画面中央にする. */
+  margin-top: -385px;
+  margin-left: -256px;
+}
+.goat-back-img1 {
+  /*マスクレイヤーとして使用する画像*/
   margin: 0 auto;
   width: 512px;
 }
 
-.footer-text {
+.stripe-panel1 {
+  height: 100vh;
+}
+.stripe-panel1 > div {
+  height: 25%;
+}
+.stripe-panel2 {
+  height: 100vh;
+}
+.stripe-panel2 > div {
+  height: 25%;
+}
+.message {
+  color: #d32254;
+  font-size: 2em;
+  position: absolute;
+  bottom: 10vh;
+  text-align: center;
+  width: 100%;
+}
+
+.bg-profile {
+  background-color: #FEACB7;
+}
+
+.one-page {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.sign-area {
+  position: absolute;
+  height: 84vh;
+  width: 100%;
+  top: 30vh;
+  background-color: #FEACB7;
+}
+.sign-area > img {
+  height: 30vh;
+  margin: 0 auto;
+}
+
+.profile-area {
+  position: absolute;
+  height: 16vh;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-area {
+  position: absolute;
+  height: 16vh;
+  width: 100%;
+  bottom: 6vh;
+}
+
+.text-footer {
   background: #FEACB7;
   color: #d32254;
   font-size: 2em;
-  /*height: 20vmax;*/
-  padding: 1em 0 1em 0;
+  padding: 1em 0 2em 0;
   width: 100%;
   text-align: center;
 }
