@@ -6,14 +6,6 @@
         <Header/>
         <!--      <Banner/>-->
         <Panels/>
-        <div class="color-one"></div>
-        <div class="color-two"></div>
-        <div class="color-three"></div>
-        <div class="color-four"></div>
-        <div class="color-five"></div>
-        <div class="color-six"></div>
-        <div class="color-seven"></div>
-        <div class="color-eight"></div>
         <Footer/>
       </div>
     </div>

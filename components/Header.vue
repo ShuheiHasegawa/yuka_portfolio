@@ -13,7 +13,8 @@
 <!--  </svg>-->
 <!--  <div id="content"></div>-->
 
-  <section class="js-mv main">
+  <section class="top-container">
+    <div class="enable-drag-container my-8">
     <!--ここからtransitionコードを開始-->
 <!--    <transition-->
 <!--        appear-->
@@ -95,22 +96,22 @@
       </label>
     </div>
 
-          <!-- 丸い図形 -->
-          <div class="c-mv_bubble js-mv-bubble">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1324 768">
-              <defs>
-                  <linearGradient v-for="(bubble, index) in bubbleList"
-                      :id="'bubble_' + index"
-                      :data-name="'bubble_' + index"
-                      :x1="bubble.x1"
-                      :y1="bubble.y1"
-                      :x2="bubble.x2"
-                      :y2="bubble.y2"
-                      :gradientTransform="bubble.gradientTransform"
-                      gradientUnits="userSpaceOnUse">
-                    <stop offset="0" :stop-color="bubble.color1"/>
-                    <stop offset="1" :stop-color="bubble.color2"/>
-                  </linearGradient>
+      <!-- 丸い図形 -->
+      <div class="bubble-group js-mv-bubble">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1324 768">
+          <defs>
+              <linearGradient v-for="(bubble, index) in bubbleList"
+                  :id="'bubble_' + index"
+                  :data-name="'bubble_' + index"
+                  :x1="bubble.x1"
+                  :y1="bubble.y1"
+                  :x2="bubble.x2"
+                  :y2="bubble.y2"
+                  :gradientTransform="bubble.gradientTransform"
+                  gradientUnits="userSpaceOnUse">
+                <stop offset="0" :stop-color="bubble.color1"/>
+                <stop offset="1" :stop-color="bubble.color2"/>
+              </linearGradient>
 
 <!--                <linearGradient id="bubble" y1="496.5" x2="121" y2="496.5" gradientTransform="matrix(1, 0, 0, -1, 0, 768)" gradientUnits="userSpaceOnUse">-->
 <!--                  <stop offset="0" stop-color="#9796f0"/>-->
@@ -178,56 +179,57 @@
 <!--                  <stop offset="0" stop-color="#e1eec3"/>-->
 <!--                  <stop offset="1" stop-color="#f05053"/>-->
 <!--                </linearGradient>-->
-              </defs>
-              <g id="item14"
-                 @click="$colorMode.preference = 'light'"
-              >
-                <circle class="cls-1" cx="60.5" cy="271.5" r="60.5"/>
-              </g>
-              <g id="item13"
-                 @click="$colorMode.preference = 'light'"
-              >
-                <circle class="cls-2" cx="660.5" cy="191.5" r="41.5"/>
-              </g>
-              <g id="item12">
-                <circle class="cls-3" cx="1245" cy="451" r="79"/>
-              </g>
-              <g id="item11">
-                <circle class="cls-4" cx="1016" cy="219" r="35"/>
-              </g>
-              <g id="item10">
-                <circle class="cls-5" cx="828" cy="273" r="75"/>
-              </g>
-              <g id="item09">
-                <circle class="cls-6" cx="474.5" cy="548.5" r="70.5"/>
-              </g>
-              <g id="item08">
-                <circle class="cls-7" cx="1023" cy="419" r="58"/>
-              </g>
-              <g id="item07">
-                <circle class="cls-8" cx="994" cy="681" r="87"/>
-              </g>
-              <g id="item06">
-                <circle class="cls-9" cx="275.5" cy="574.5" r="106.5"/>
-              </g>
-              <g id="item05">
-                <circle class="cls-10" cx="528" cy="478" r="52"/>
-              </g>
-              <g id="item04">
-                <circle class="cls-11" cx="436.5" cy="113.5" r="81.5"/>
-              </g>
-              <g id="item03">
-                <circle class="cls-12" cx="211.5" cy="71.5" r="42.5"/>
-              </g>
-              <g id="item02">
-                <circle class="cls-13" cx="1081.5" cy="42.5" r="42.5"/>
-              </g>
-              <g id="item01">
-                <path class="cls-14" d="M1081,681a87,87,0,1,1-87-87A87,87,0,0,1,1081,681Z"/>
-              </g>
-            </svg>
-          </div>
+          </defs>
+          <g id="item14"
+             @click="$colorMode.preference = 'light'"
+          >
+            <circle class="cls-1" cx="60.5" cy="271.5" r="60.5"/>
+          </g>
+          <g id="item13"
+             @click="$colorMode.preference = 'light'"
+          >
+            <circle class="cls-2" cx="660.5" cy="191.5" r="41.5"/>
+          </g>
+          <g id="item12">
+            <circle class="cls-3" cx="1245" cy="451" r="79"/>
+          </g>
+          <g id="item11">
+            <circle class="cls-4" cx="1016" cy="219" r="35"/>
+          </g>
+          <g id="item10">
+            <circle class="cls-5" cx="828" cy="273" r="75"/>
+          </g>
+          <g id="item09">
+            <circle class="cls-6" cx="474.5" cy="548.5" r="70.5"/>
+          </g>
+          <g id="item08">
+            <circle class="cls-7" cx="1023" cy="419" r="58"/>
+          </g>
+          <g id="item07">
+            <circle class="cls-8" cx="994" cy="681" r="87"/>
+          </g>
+          <g id="item06">
+            <circle class="cls-9" cx="275.5" cy="574.5" r="106.5"/>
+          </g>
+          <g id="item05">
+            <circle class="cls-10" cx="528" cy="478" r="52"/>
+          </g>
+          <g id="item04">
+            <circle class="cls-11" cx="436.5" cy="113.5" r="81.5"/>
+          </g>
+          <g id="item03">
+            <circle class="cls-12" cx="211.5" cy="71.5" r="42.5"/>
+          </g>
+          <g id="item02">
+            <circle class="cls-13" cx="1081.5" cy="42.5" r="42.5"/>
+          </g>
+          <g id="item01">
+            <path class="cls-14" d="M1081,681a87,87,0,1,1-87-87A87,87,0,0,1,1081,681Z"/>
+          </g>
+        </svg>
+      </div>
 
+    </div>
   </section>
 </template>
 
@@ -693,7 +695,7 @@ export default {
       // Create Draggable instance
       Draggable.create("#dragGoat1", {
         type: "x,y",
-        bounds: ".main",
+        bounds: ".enable-drag-container",
         // edgeResistance:0.5,
         throwProps: true,
         inertia: true,
@@ -707,7 +709,7 @@ export default {
       });
       Draggable.create("#dragGoat2", {
         type: "x,y",
-        bounds: ".main",
+        bounds: ".enable-drag-container",
         // edgeResistance:0.5,
         throwProps: true,
         inertia: true,
@@ -721,7 +723,7 @@ export default {
       });
       Draggable.create("#dragGoat3", {
         type: "x,y",
-        bounds: ".main",
+        bounds: ".enable-drag-container",
         // edgeResistance:0.5,
         throwProps: true,
         inertia: true,
@@ -774,16 +776,16 @@ export default {
 </script>
 
 <style scoped>
-.l-wrapper {
-  /*height: 100vh;*/
-  /*width: 100vw;*/
-}
-.main {
-  /*height: 100vh;*/
-  width: 100vw;
-  /*width: 390px;*/
+.top-container {
+  height: 125vh;
   overflow: hidden;
   position: relative;
+}
+.enable-drag-container {
+  top: 0;
+  height: 70%;
+  width: 100%;
+  position: absolute;
 }
 .c-header {
   position: absolute;
@@ -857,8 +859,8 @@ export default {
   z-index: -2;
   top: 10vh;
   left: -40vw;
-  width: 70vh;
-  height: 70vh;
+  width: 70vmax;
+  height: 70vmax;
   border-radius: 50%;
   pointer-events: none;
 }
@@ -902,6 +904,10 @@ export default {
     pointer-events: none;
   }
 
+}
+
+.bubble-group > g {
+  cursor: pointer;
 }
 
 .c-loader-bg {

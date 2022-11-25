@@ -106,7 +106,7 @@
 <!--      /></swiper-slide>-->
 <!--    </swiper>-->
 
-    <div class="area3 relative mt-16">
+    <div class="relative my-32">
       <div>
         <img class="gray-circle01 bg-gray-600 opacity-50"/>
       </div>
@@ -126,19 +126,19 @@
 <!--      <h2 class="text-base text1">Everything you need</h2>-->
 <!--    </div>-->
 
-    <div class="panel5 h-screen w-screen flex justify-center items-center">
+    <div class="polaroid-container h-screen w-screen flex justify-center items-center my-32">
       <ul id="polaroids">
-        <li><a href="img/bear.jpg" title="しろくまさん">
+        <li><a href="#polaroids" title="しろくまさん">
           <img src="@/assets/photos/_DSC0094.jpg" alt="白熊の写真"></a></li>
-        <li><a href="img/deer.jpg" title="シカの親子">
+        <li><a href="#polaroids" title="シカの親子">
           <img src="@/assets/photos/_DSC2000.jpg" alt="鹿の写真"></a></li>
-        <li><a href="img/penguin.jpg" title="水の中のペンギンさん">
+        <li><a href="#polaroids" title="水の中のペンギンさん">
           <img src="@/assets/photos/_DSC2507.jpg" alt="ペンギンの写真"></a></li>
-        <li><a href="img/giraffe.jpg" title="ふりかえりゆかさん">
+        <li><a href="#polaroids" title="ふりかえりゆかさん">
           <img src="@/assets/photos/_DSC3634.jpg" alt="麒麟の写真"></a></li>
-        <li><a href="img/goat.jpg" title="はい、チーズ">
+        <li><a href="#polaroids" title="はい、チーズ">
           <img src="@/assets/photos/_DSC4014.jpg" alt="山羊の写真"></a></li>
-        <li><a href="img/tiger.jpg" title="パフェゆかさん">
+        <li><a href="#polaroids" title="パフェゆかさん">
           <img src="@/assets/photos/_DSC3942.jpg" alt="虎の写真"></a></li>
       </ul>
     </div>
@@ -622,10 +622,6 @@ export default {
 </script>
 
 <style scoped>
-.area3 {
-  /*height: 100vh;*/
-  /*width: 100%;*/
-}
 .swiper {
   width: 100%;
   padding-top: 50px;
@@ -672,18 +668,15 @@ export default {
   pointer-events: none;
 }
 
-.panel4 {
-  height: 50vmax;
+.polaroid-container {
+  height: 100%;
+  /*height: 250vmax;*/
 }
-
-.panel5 {
-  height: 250vmax;
-}
-@media (min-width: 480px) {
-  .panel5 {
-    height: 75vh;
-  }
-}
+/*@media (min-width: 480px) {*/
+/*  .panel5 {*/
+/*    height: 75vh;*/
+/*  }*/
+/*}*/
 
 @font-face {
   font-family: 'Hina2ndGrade';
@@ -692,7 +685,8 @@ export default {
 
 ul#polaroids {
   list-style-type: none;
-  width: 50%;
+  width: 60vmax;
+  margin: 32px;
 }
 
 ul#polaroids li a {
@@ -709,7 +703,8 @@ ul#polaroids li a {
   -moz-transform: rotate(5deg);
   transform: rotate(5deg);
 
-  width: 200px;
+  width: 30vmax;
+  /*width: 200px;*/
   text-decoration: none;
   text-align: center;
 }
@@ -734,7 +729,7 @@ ul#polaroids li:nth-child(4) a {
   left: 10px;
 }
 ul#polaroids li a img {
-  width: 200px;
+  width: 30vmax;
   /*height: 200px;*/
   margin-bottom: 10px;
   background-size: cover;

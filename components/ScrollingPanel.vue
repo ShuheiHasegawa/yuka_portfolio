@@ -181,7 +181,7 @@ li {
 }
 
 .scroll-wrapper {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .wrapper {
