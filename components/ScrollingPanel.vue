@@ -14,58 +14,58 @@
     <section class="scroll-gallery">
       <ul class="wrapper" style="translate: none; rotate: none; scale: none; transform: translate3d(1362.08px, 0px, 0px);">
         <li>
-          <img src="https://source.unsplash.com/random/1240x874?sig=134" width="1240">
+          <img src="@/assets/photos/yuka/horizontal/1.jpg">
         </li>
         <li>
-          <img src="https://source.unsplash.com/random/1240x874?sig=47" width="1240">
+          <img src="@/assets/photos/yuka/horizontal/12.jpg">
         </li>
         <li>
-          <img src="https://source.unsplash.com/random/1240x874?sig=182" width="1240">
+          <img src="@/assets/photos/yuka/horizontal/13.jpg">
         </li>
       </ul>
     </section>
     <section class="scroll-gallery">
       <ul class="wrapper" style="translate: none; rotate: none; scale: none; transform: translate(-2416px, 0px);">
         <li>
-          <img src="https://source.unsplash.com/random/1240x874?sig=195" width="1240">
+          <img src="@/assets/photos/yuka/horizontal/17.jpg">
         </li>
         <li>
-          <img src="https://source.unsplash.com/random/1240x874?sig=83" width="1240">
+          <img src="@/assets/photos/yuka/horizontal/16.jpg">
         </li>
         <li>
-          <img src="https://source.unsplash.com/random/1240x874?sig=124" width="1240">
+          <img src="@/assets/photos/yuka/horizontal/36.jpg">
         </li>
       </ul>
     </section>
     <section class="scroll-gallery">
       <ul class="wrapper" style="translate: none; rotate: none; scale: none; transform: translate(100%, 0px);">
         <li>
-          <img src="https://source.unsplash.com/random/1240x874?sig=6" width="1240">
+          <img src="@/assets/photos/yuka/vertical/3.jpg">
         </li>
         <li>
-          <img src="https://source.unsplash.com/random/1240x874?sig=25" width="1240">
+          <img src="@/assets/photos/yuka/vertical/4.jpg">
         </li>
         <li>
-          <img src="https://source.unsplash.com/random/1240x874?sig=159" width="1240">
+          <img src="@/assets/photos/yuka/vertical/33.jpg">
         </li>
         <li>
-          <img src="https://source.unsplash.com/random/1240x874?sig=169" width="1240">
+          <img src="@/assets/photos/yuka/vertical/42.jpg">
         </li>
       </ul>
     </section>
     <section class="scroll-gallery">
       <ul class="wrapper" style="translate: none; rotate: none; scale: none; transform: translate(-3216px, 0px);">
         <li>
-          <img src="https://source.unsplash.com/random/1240x874?sig=40" width="1240">
+          <img src="@/assets/photos/yuka/vertical/74.jpg">
         </li>
         <li>
-          <img src="https://source.unsplash.com/random/1240x874?sig=47" width="1240">
+          <img src="@/assets/photos/yuka/vertical/92.jpg">
         </li>
         <li>
-          <img src="https://source.unsplash.com/random/1240x874?sig=21" width="1240">
+          <img src="@/assets/photos/yuka/vertical/115.jpg">
         </li>
         <li>
-          <img src="https://source.unsplash.com/random/1240x874?sig=102" width="1240">
+          <img src="@/assets/photos/yuka/vertical/100.jpg">
         </li>
       </ul>
     </section>
@@ -194,6 +194,7 @@ li {
   border-radius: 50%;
   margin-top: 2em;
   margin-bottom: 2em;
+  object-fit: cover;
 }
 
 .scroll-gallery:not(.last) {

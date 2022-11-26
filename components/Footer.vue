@@ -10,8 +10,8 @@
           <p>I love goats.</p>
         </div>
       </div>
-      <figure class="goat-front-img">
-        <img src="@/assets/photos/_DSC3864.jpg"/>
+      <figure class="goat-front-mask">
+        <img class="opacity-80" src="@/assets/photos/yuka/vertical/68.jpg"/>
       </figure>
     </div>
 
@@ -97,7 +97,7 @@ export default {
         }
       })
           .from(".text-love-goats", {
-            rotate: -10
+            rotate: -30
           })
           .to(".text-love-goats", {
             rotate: 0
@@ -114,7 +114,7 @@ export default {
         }
       })
           .from(".text-love-parfaits", {
-            rotate: -10
+            rotate: -30
           })
           .to(".text-love-parfaits", {
             rotate: 0
@@ -130,7 +130,7 @@ export default {
         }
       })
           .from(".text-profile", {
-            rotate: -10
+            rotate: -30
           })
           .to(".text-profile", {
             rotate: 0
@@ -184,7 +184,7 @@ export default {
 .text {
   color: #d32254;
   font-size: 2em;
-  padding: 0 2em 0 2em;
+  padding: 0 1em 0 1em;
 }
 
 .goat-front-area {
@@ -192,7 +192,7 @@ export default {
   position: absolute;
 }
 
-.goat-front-img {
+.goat-front-mask {
   /*マスクレイヤーとして使用する画像*/
   mask-image: url("@/assets/photos/goat/front.svg");
   mask-repeat: no-repeat;
@@ -285,9 +285,15 @@ export default {
 
 .profile-area {
   position: absolute;
-  height: 16vh;
+  /*height: 16vh;*/
   width: 100%;
   bottom: 0;
+  z-index: 1;
+}
+
+.text-profile {
+  /*position: absolute;*/
+  width: 100%;
 }
 
 .footer-area {

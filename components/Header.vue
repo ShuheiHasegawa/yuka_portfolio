@@ -875,7 +875,7 @@ export default {
 }
 
 .bg-circle-01 {
-  background-image: url("@/assets/photos/_DSC3634.jpg");
+  background-image: url("@/assets/photos/yuka/vertical/94.jpg");
   background-size: cover;
   position: absolute;
   z-index: -2;
@@ -888,7 +888,7 @@ export default {
 }
 
 .bg-circle-02 {
-  background-image: url("@/assets/photos/_DSC3409.jpg");
+  background-image: url("@/assets/photos/yuka/horizontal/43.jpg");
   background-size: cover;
   position: absolute;
   z-index: -1;
@@ -899,9 +899,9 @@ export default {
   pointer-events: none;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 640px) {
   .bg-circle-01 {
-    background-image: url("@/assets/photos/_DSC3634.jpg");
+    background-image: url("@/assets/photos/yuka/vertical/94.jpg");
     background-size: cover;
     position: absolute;
     z-index: -2;
@@ -914,14 +914,14 @@ export default {
   }
 
   .bg-circle-02 {
-    background-image: url("@/assets/photos/_DSC3409.jpg");
+    background-image: url("@/assets/photos/yuka/horizontal/43.jpg");
     background-size: cover;
     position: absolute;
     z-index: -1;
     top: 5vh;
     right: -6vw;
-    width: 50vmax;
-    height: 50vmax;
+    width: 30vmax;
+    height: 30vmax;
     border-radius: 50%;
     pointer-events: none;
   }

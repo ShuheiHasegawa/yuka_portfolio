@@ -36,7 +36,7 @@
           @enter="enterPhoto"
           @after-enter="afterPhoto"
       >
-        <img src="@/assets/photos/_DSC1146.jpg" alt="" height="600">
+        <img src="@/assets/photos/yuka/vertical/17.jpg" alt="" height="600">
       </transition>
     </div>
 
@@ -128,21 +128,20 @@
 
     <div class="polaroid-container h-screen w-screen flex justify-center items-center my-32">
       <ul id="polaroids">
-        <li><a href="#polaroids" title="しろくまさん">
-          <img src="@/assets/photos/_DSC0094.jpg" alt="白熊の写真"></a></li>
-        <li><a href="#polaroids" title="シカの親子">
-          <img src="@/assets/photos/_DSC2000.jpg" alt="鹿の写真"></a></li>
-        <li><a href="#polaroids" title="水の中のペンギンさん">
-          <img src="@/assets/photos/_DSC2507.jpg" alt="ペンギンの写真"></a></li>
-        <li><a href="#polaroids" title="ふりかえりゆかさん">
-          <img src="@/assets/photos/_DSC3634.jpg" alt="麒麟の写真"></a></li>
+        <li><a href="#polaroids" title="よこがお">
+          <img src="@/assets/photos/yuka/vertical/16.jpg"></a></li>
+        <li><a href="#polaroids" title="えがお">
+          <img src="@/assets/photos/yuka/vertical/10.jpg"></a></li>
+        <li><a href="#polaroids" title="どや顔">
+          <img src="@/assets/photos/yuka/vertical/36.jpg"></a></li>
+        <li><a href="#polaroids" title="むにゅ">
+          <img src="@/assets/photos/yuka/vertical/52.jpg"></a></li>
         <li><a href="#polaroids" title="はい、チーズ">
-          <img src="@/assets/photos/_DSC4014.jpg" alt="山羊の写真"></a></li>
+          <img src="@/assets/photos/yuka/vertical/134.jpg"></a></li>
         <li><a href="#polaroids" title="パフェゆかさん">
-          <img src="@/assets/photos/_DSC3942.jpg" alt="虎の写真"></a></li>
+          <img src="@/assets/photos/yuka/vertical/125.jpg"></a></li>
       </ul>
     </div>
-
   </div>
 
 </template>
@@ -644,8 +643,9 @@ export default {
 .gray-circle01 {
   width: 60vw;
   height: 60vw;
-  background-image: url("@/assets/photos/_DSC1707.jpg");
+  background-image: url("@/assets/photos/yuka/horizontal/5.jpg");
   background-size: cover;
+  background-position: right 30% top 20px;
   border-radius: 50%;
   margin: 0 auto;
   pointer-events: none;
@@ -653,7 +653,7 @@ export default {
 .gray-circle02 {
   width: 60vw;
   height: 60vw;
-  background-image: url("@/assets/photos/_DSC1146.jpg");
+  background-image: url("@/assets/photos/yuka/vertical/12.jpg");
   background-size: cover;
   border-radius: 50%;
   margin: 0 auto;
@@ -662,7 +662,7 @@ export default {
 .gray-circle03 {
   width: 60vw;
   height: 60vw;
-  background-image: url("@/assets/photos/_DSC1707.jpg");
+  background-image: url("@/assets/photos/yuka/horizontal/14.jpg");
   background-size: cover;
   border-radius: 50%;
   margin: 0 auto;
@@ -764,31 +764,31 @@ ul#polaroids li a:hover {
   z-index: -1;
 }
 .bg-circle-03 {
-  background-image: url("@/assets/photos/_DSC2946.jpg");
+  background-image: url("@/assets/photos/yuka/vertical/2.jpg");
   background-size: cover;
 }
 .bg-circle-04 {
-  background-image: url("@/assets/photos/_DSC0890.jpg");
+  background-image: url("@/assets/photos/yuka/horizontal/11.jpg");
   background-size: cover;
 }
 .bg-circle-05 {
-  background-image: url("@/assets/photos/_DSC2313.jpg");
+  background-image: url("@/assets/photos/yuka/vertical/14.jpg");
   background-size: cover;
 }
 .bg-circle-06 {
-  background-image: url("@/assets/photos/_DSC2313.jpg");
+  background-image: url("@/assets/photos/yuka/vertical/26.jpg");
   background-size: cover;
 }
 .bg-circle-07 {
-  background-image: url("@/assets/photos/_DSC2313.jpg");
+  background-image: url("@/assets/photos/yuka/vertical/47.jpg");
   background-size: cover;
 }
 .bg-circle-08 {
-  background-image: url("@/assets/photos/_DSC2313.jpg");
+  background-image: url("@/assets/photos/yuka/vertical/82.jpg");
   background-size: cover;
 }
 .bg-circle-09 {
-  background-image: url("@/assets/photos/_DSC2313.jpg");
+  background-image: url("@/assets/photos/yuka/horizontal/48.jpg");
   background-size: cover;
 }
 .bg-circle-back {
