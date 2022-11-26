@@ -3,10 +3,10 @@
     <div id="smooth-content">
       <div class="layout-container relative">
         <Opening/>
-        <Header/>
+        <LazyHeader/>
         <!--      <Banner/>-->
-        <Panels/>
-        <Footer/>
+        <LazyPanels/>
+        <LazyFooter/>
       </div>
     </div>
   </div>
