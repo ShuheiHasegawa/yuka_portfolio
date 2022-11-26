@@ -36,7 +36,11 @@
           @enter="enterPhoto"
           @after-enter="afterPhoto"
       >
-        <img src="@/assets/photos/yuka/vertical/17.webp" alt="" height="600">
+        <nuxt-img
+            src="/yuka/vertical/17.webp"
+            format="webp"
+            loading="lazy"
+        />
       </transition>
     </div>
 
@@ -129,17 +133,47 @@
     <div class="polaroid-container h-screen w-screen flex justify-center items-center my-32">
       <ul id="polaroids">
         <li><a href="#polaroids" title="よこがお">
-          <img src="@/assets/photos/yuka/vertical/16.webp"></a></li>
+          <nuxt-img
+              src="/yuka/vertical/16.webp"
+              format="webp"
+              loading="lazy"
+          />
+        </a></li>
         <li><a href="#polaroids" title="えがお">
-          <img src="@/assets/photos/yuka/vertical/10.webp"></a></li>
+          <nuxt-img
+              src="/yuka/vertical/10.webp"
+              format="webp"
+              loading="lazy"
+          />
+        </a></li>
         <li><a href="#polaroids" title="どや顔">
-          <img src="@/assets/photos/yuka/vertical/36.webp"></a></li>
+          <nuxt-img
+              src="/yuka/vertical/36.webp"
+              format="webp"
+              loading="lazy"
+          />
+        </a></li>
         <li><a href="#polaroids" title="むにゅ">
-          <img src="@/assets/photos/yuka/vertical/52.webp"></a></li>
+          <nuxt-img
+              src="/yuka/vertical/52.webp"
+              format="webp"
+              loading="lazy"
+          />
+        </a></li>
         <li><a href="#polaroids" title="はい、チーズ">
-          <img src="@/assets/photos/yuka/vertical/134.webp"></a></li>
+          <nuxt-img
+              src="/yuka/vertical/134.webp"
+              format="webp"
+              loading="lazy"
+          />
+        </a></li>
         <li><a href="#polaroids" title="パフェゆかさん">
-          <img src="@/assets/photos/yuka/vertical/125.webp"></a></li>
+          <nuxt-img
+              src="/yuka/vertical/125.webp"
+              format="webp"
+              loading="lazy"
+          />
+        </a></li>
       </ul>
     </div>
   </div>

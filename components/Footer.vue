@@ -11,7 +11,12 @@
         </div>
       </div>
       <figure class="goat-front-mask">
-        <img class="opacity-80" src="@/assets/photos/yuka/vertical/68.webp"/>
+        <nuxt-img
+            src="/yuka/vertical/68.webp"
+            class="opacity-80"
+            format="webp"
+            loading="lazy"
+        />
       </figure>
     </div>
 
@@ -25,7 +30,12 @@
         </div>
       </div>
       <figure class="goat-back-img">
-        <img src="@/assets/photos/yuka/vertical/114.webp"/>
+        <nuxt-img
+            src="/yuka/vertical/114.webp"
+            class="opacity-80"
+            format="webp"
+            loading="lazy"
+        />
       </figure>
     </div>
 
@@ -37,7 +47,11 @@
 
     <div class="one-page bg-profile">
       <div class="sign-area">
-        <img src="@/assets/photos/draw/draw_goat.webp"/>
+        <nuxt-img
+            src="/draw/draw_goat.webp"
+            format="webp"
+            loading="lazy"
+        />
       </div>
       <div class="profile-area">
         <div class="text text-profile">
@@ -54,7 +68,11 @@
       <div class="enable-drag-profile my-8">
 
       <div class="sign-area">
-        <img src="@/assets/photos/draw/draw_sign.webp"/>
+        <nuxt-img
+            src="/draw/draw_sign.webp"
+            format="webp"
+            loading="lazy"
+        />
       </div>
 
       <div class="footer-area">
