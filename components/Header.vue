@@ -257,7 +257,7 @@
 
 <script>
 import gsap from "gsap"
-import {Draggable} from "gsap/Draggable";
+import { Draggable } from "gsap/Draggable";
 
 // import {ScrollTrigger} from "gsap/ScrollTrigger"
 import {loadFull} from "tsparticles";
@@ -710,14 +710,17 @@ export default {
 
       // set initial drag position
       gsap.set("#dragGoat1",{
+        display: "block",
         x:30,
         y:30
       });
       gsap.set("#dragGoat2",{
+        display: "block",
         x:300,
         y:350
       });
       gsap.set("#dragGoat3",{
+        display: "block",
         x:-210,
         y:480
       });
@@ -1042,6 +1045,7 @@ export default {
 
 /* やぎボタン */
 .goat-wrapper {
+  display: none;
   width: 120px;
   height: 120px;
   margin: 60px auto;
@@ -1126,17 +1130,17 @@ input {
 }
 
 .bg-goat-01:after {
-  background-image: url("@/assets/photos/goat/AdobeStock_123916254.jpeg");
+  background-image: url("@/assets/photos/goat/badge/1.jpeg");
   background-size: cover;
   background-position: center;
 }
 .bg-goat-02:after {
-  background-image: url("@/assets/photos/goat/AdobeStock_42390200.jpeg");
+  background-image: url("@/assets/photos/goat/badge/2.jpeg");
   background-size: cover;
   background-position: center;
 }
 .bg-goat-03:after {
-  background-image: url("@/assets/photos/goat/AdobeStock_2433910.jpeg");
+  background-image: url("@/assets/photos/goat/badge/3.jpeg");
   background-size: cover;
   background-position: center;
 }
