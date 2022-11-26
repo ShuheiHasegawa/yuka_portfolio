@@ -67,10 +67,8 @@ export default {
               opacity: 1,
               display: "block"
             });
-      ;
 
     }
-
   }
 }
 </script>
