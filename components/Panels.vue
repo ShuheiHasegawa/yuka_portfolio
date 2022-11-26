@@ -36,19 +36,19 @@
           @enter="enterPhoto"
           @after-enter="afterPhoto"
       >
-        <img src="@/assets/photos/yuka/vertical/17.jpg" alt="" height="600">
+        <img src="@/assets/photos/yuka/vertical/17.webp" alt="" height="600">
       </transition>
     </div>
 
 <!--    <div class="grid grid-cols-3 pt-48 gap-16 photo-row1">-->
 <!--      <div class="md:col-span-1 col-span-3">-->
-<!--        <img src="@/assets/photos/_DSC0871.jpg" alt="" height="600">-->
+<!--        <img src="@/assets/photos/_DSC0871.webp" alt="" height="600">-->
 <!--      </div>-->
 <!--      <div class="md:col-span-1 col-span-3">-->
-<!--        <img src="@/assets/photos/_DSC1146.jpg" alt="" height="600">-->
+<!--        <img src="@/assets/photos/_DSC1146.webp" alt="" height="600">-->
 <!--      </div>-->
 <!--      <div class="md:col-span-1 col-span-3">-->
-<!--        <img src="@/assets/photos/_DSC0890.jpg" alt="" height="600">-->
+<!--        <img src="@/assets/photos/_DSC0890.webp" alt="" height="600">-->
 <!--      </div>-->
 <!--    </div>-->
 
@@ -71,38 +71,38 @@
 <!--    >-->
 <!--      <swiper-slide-->
 <!--      ><img-->
-<!--          src="https://swiperjs.com/demos/images/nature-1.jpg"/></swiper-slide-->
+<!--          src="https://swiperjs.com/demos/images/nature-1.webp"/></swiper-slide-->
 <!--      >-->
 <!--      <swiper-slide-->
 <!--      ><img-->
-<!--          src="https://swiperjs.com/demos/images/nature-2.jpg"/></swiper-slide-->
+<!--          src="https://swiperjs.com/demos/images/nature-2.webp"/></swiper-slide-->
 <!--      >-->
 <!--      <swiper-slide-->
 <!--      ><img-->
-<!--          src="https://swiperjs.com/demos/images/nature-3.jpg"/></swiper-slide-->
+<!--          src="https://swiperjs.com/demos/images/nature-3.webp"/></swiper-slide-->
 <!--      >-->
 <!--      <swiper-slide-->
 <!--      ><img-->
-<!--          src="https://swiperjs.com/demos/images/nature-4.jpg"/></swiper-slide-->
+<!--          src="https://swiperjs.com/demos/images/nature-4.webp"/></swiper-slide-->
 <!--      >-->
 <!--      <swiper-slide-->
 <!--      ><img-->
-<!--          src="https://swiperjs.com/demos/images/nature-5.jpg"/></swiper-slide-->
+<!--          src="https://swiperjs.com/demos/images/nature-5.webp"/></swiper-slide-->
 <!--      >-->
 <!--      <swiper-slide-->
 <!--      ><img-->
-<!--          src="https://swiperjs.com/demos/images/nature-6.jpg"/></swiper-slide-->
+<!--          src="https://swiperjs.com/demos/images/nature-6.webp"/></swiper-slide-->
 <!--      >-->
 <!--      <swiper-slide-->
 <!--      ><img-->
-<!--          src="https://swiperjs.com/demos/images/nature-7.jpg"/></swiper-slide-->
+<!--          src="https://swiperjs.com/demos/images/nature-7.webp"/></swiper-slide-->
 <!--      >-->
 <!--      <swiper-slide-->
 <!--      ><img-->
-<!--          src="https://swiperjs.com/demos/images/nature-8.jpg"/></swiper-slide-->
+<!--          src="https://swiperjs.com/demos/images/nature-8.webp"/></swiper-slide-->
 <!--      >-->
 <!--      <swiper-slide-->
-<!--      ><img src="https://swiperjs.com/demos/images/nature-9.jpg"-->
+<!--      ><img src="https://swiperjs.com/demos/images/nature-9.webp"-->
 <!--      /></swiper-slide>-->
 <!--    </swiper>-->
 
@@ -129,17 +129,17 @@
     <div class="polaroid-container h-screen w-screen flex justify-center items-center my-32">
       <ul id="polaroids">
         <li><a href="#polaroids" title="よこがお">
-          <img src="@/assets/photos/yuka/vertical/16.jpg"></a></li>
+          <img src="@/assets/photos/yuka/vertical/16.webp"></a></li>
         <li><a href="#polaroids" title="えがお">
-          <img src="@/assets/photos/yuka/vertical/10.jpg"></a></li>
+          <img src="@/assets/photos/yuka/vertical/10.webp"></a></li>
         <li><a href="#polaroids" title="どや顔">
-          <img src="@/assets/photos/yuka/vertical/36.jpg"></a></li>
+          <img src="@/assets/photos/yuka/vertical/36.webp"></a></li>
         <li><a href="#polaroids" title="むにゅ">
-          <img src="@/assets/photos/yuka/vertical/52.jpg"></a></li>
+          <img src="@/assets/photos/yuka/vertical/52.webp"></a></li>
         <li><a href="#polaroids" title="はい、チーズ">
-          <img src="@/assets/photos/yuka/vertical/134.jpg"></a></li>
+          <img src="@/assets/photos/yuka/vertical/134.webp"></a></li>
         <li><a href="#polaroids" title="パフェゆかさん">
-          <img src="@/assets/photos/yuka/vertical/125.jpg"></a></li>
+          <img src="@/assets/photos/yuka/vertical/125.webp"></a></li>
       </ul>
     </div>
   </div>
@@ -509,19 +509,19 @@ export default {
   },
   setup() {
     const photoList1 = [
-      {path: "/photos/_DSC1146.jpg"},
-      {path: "/photos/_DSC1146.jpg"},
-      {path: "/photos/_DSC1146.jpg"},
+      {path: "/photos/_DSC1146.webp"},
+      {path: "/photos/_DSC1146.webp"},
+      {path: "/photos/_DSC1146.webp"},
     ]
     const photoList2 = [
-      {path: "/photos/_DSC1146.jpg"},
-      {path: "/photos/_DSC1146.jpg"},
-      {path: "/photos/_DSC1146.jpg"},
+      {path: "/photos/_DSC1146.webp"},
+      {path: "/photos/_DSC1146.webp"},
+      {path: "/photos/_DSC1146.webp"},
     ]
     const photoList3 = [
-      {path: "/photos/_DSC1146.jpg"},
-      {path: "/photos/_DSC1146.jpg"},
-      {path: "/photos/_DSC1146.jpg"},
+      {path: "/photos/_DSC1146.webp"},
+      {path: "/photos/_DSC1146.webp"},
+      {path: "/photos/_DSC1146.webp"},
     ]
 
     // ここにアニメーションのメソッドを追加
@@ -643,7 +643,7 @@ export default {
 .gray-circle01 {
   width: 60vw;
   height: 60vw;
-  background-image: url("@/assets/photos/yuka/horizontal/5.jpg");
+  background-image: url("@/assets/photos/yuka/horizontal/5.webp");
   background-size: cover;
   background-position: right 30% top 20px;
   border-radius: 50%;
@@ -653,7 +653,7 @@ export default {
 .gray-circle02 {
   width: 60vw;
   height: 60vw;
-  background-image: url("@/assets/photos/yuka/vertical/12.jpg");
+  background-image: url("@/assets/photos/yuka/vertical/12.webp");
   background-size: cover;
   border-radius: 50%;
   margin: 0 auto;
@@ -662,7 +662,7 @@ export default {
 .gray-circle03 {
   width: 60vw;
   height: 60vw;
-  background-image: url("@/assets/photos/yuka/horizontal/14.jpg");
+  background-image: url("@/assets/photos/yuka/horizontal/14.webp");
   background-size: cover;
   border-radius: 50%;
   margin: 0 auto;
@@ -763,31 +763,31 @@ ul#polaroids li a:hover {
   z-index: -1;
 }
 .bg-circle-03 {
-  background-image: url("@/assets/photos/yuka/vertical/2.jpg");
+  background-image: url("@/assets/photos/yuka/vertical/2.webp");
   background-size: cover;
 }
 .bg-circle-04 {
-  background-image: url("@/assets/photos/yuka/horizontal/11.jpg");
+  background-image: url("@/assets/photos/yuka/horizontal/11.webp");
   background-size: cover;
 }
 .bg-circle-05 {
-  background-image: url("@/assets/photos/yuka/vertical/14.jpg");
+  background-image: url("@/assets/photos/yuka/vertical/14.webp");
   background-size: cover;
 }
 .bg-circle-06 {
-  background-image: url("@/assets/photos/yuka/vertical/26.jpg");
+  background-image: url("@/assets/photos/yuka/vertical/26.webp");
   background-size: cover;
 }
 .bg-circle-07 {
-  background-image: url("@/assets/photos/yuka/vertical/47.jpg");
+  background-image: url("@/assets/photos/yuka/vertical/47.webp");
   background-size: cover;
 }
 .bg-circle-08 {
-  background-image: url("@/assets/photos/yuka/vertical/82.jpg");
+  background-image: url("@/assets/photos/yuka/vertical/82.webp");
   background-size: cover;
 }
 .bg-circle-09 {
-  background-image: url("@/assets/photos/yuka/horizontal/48.jpg");
+  background-image: url("@/assets/photos/yuka/horizontal/48.webp");
   background-size: cover;
 }
 .bg-circle-back {

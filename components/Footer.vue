@@ -11,7 +11,7 @@
         </div>
       </div>
       <figure class="goat-front-mask">
-        <img class="opacity-80" src="@/assets/photos/yuka/vertical/68.jpg"/>
+        <img class="opacity-80" src="@/assets/photos/yuka/vertical/68.webp"/>
       </figure>
     </div>
 
@@ -25,7 +25,7 @@
         </div>
       </div>
       <figure class="goat-back-img">
-        <img src="@/assets/photos/_DSC3880.jpg"/>
+        <img src="@/assets/photos/yuka/vertical/114.webp"/>
       </figure>
     </div>
 
@@ -37,7 +37,7 @@
 
     <div class="one-page bg-profile">
       <div class="sign-area">
-        <img src="@/assets/photos/draw/draw_goat.png"/>
+        <img src="@/assets/photos/draw/draw_goat.webp"/>
       </div>
       <div class="profile-area">
         <div class="text text-profile">
@@ -54,7 +54,7 @@
       <div class="enable-drag-profile my-8">
 
       <div class="sign-area">
-        <img src="@/assets/photos/draw/draw_sign.png"/>
+        <img src="@/assets/photos/draw/draw_sign.webp"/>
       </div>
 
       <div class="footer-area">
@@ -483,17 +483,17 @@ input {
 }
 
 .bg-goat-04:after {
-  background-image: url("@/assets/photos/goat/badge/4.jpeg");
+  background-image: url("@/assets/photos/goat/badge/4.webp");
   background-size: cover;
   background-position: center;
 }
 .bg-goat-05:after {
-  background-image: url("@/assets/photos/goat/badge/5.jpeg");
+  background-image: url("@/assets/photos/goat/badge/5.webp");
   background-size: cover;
   background-position: center;
 }
 .bg-goat-06:after {
-  background-image: url("@/assets/photos/goat/badge/6.jpeg");
+  background-image: url("@/assets/photos/goat/badge/6.webp");
   background-size: cover;
   background-position: center;
 }

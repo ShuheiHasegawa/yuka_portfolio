@@ -37,6 +37,9 @@ export default defineNuxtConfig({
     app: {
         pageTransition: { name: "fade", mode: "out-in" },
         head: {
+            htmlAttrs: {
+                lang: 'en',
+            },
             charset: "utf-16",
             viewport: "width=device-width, initial-scale=1.0",
             title: "Yuka Kohinata",
