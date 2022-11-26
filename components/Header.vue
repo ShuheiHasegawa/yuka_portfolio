@@ -43,13 +43,13 @@
     <!--ここでtransitionをクローズ-->
 
       <!-- 黒い背景とドット -->
-<!--      <div class="c-loader-bg js-loader-bg">-->
-<!--        <div class="c-loader-dot js-loader-dot-wrap">-->
-<!--          <span></span>-->
-<!--          <span></span>-->
-<!--          <span></span>-->
-<!--        </div>-->
-<!--      </div>-->
+      <div class="c-loader-bg js-loader-bg">
+        <div class="c-loader-dot js-loader-dot-wrap">
+          <div class="load-circle"></div>
+          <div class="load-circle"></div>
+          <div class="load-circle"></div>
+        </div>
+      </div>
 
       <!-- ヘッダー -->
 <!--      <header class="c-header js-header">-->
@@ -481,7 +481,9 @@ export default {
 
       /* 以下アニメーション */
       const jsLoaderBg = '.js-loader-bg'; // カーテン（黒い背景）
-      const jsDot = '.js-loader-dot-wrap > span'; // ドット
+      // const jsDot = '.js-loader-dot-wrap > span'; // ドット
+      const jsDotWrap = '.js-loader-dot-wrap'; // ドット
+      const jsDot = '.js-loader-dot-wrap > div'; // ドット
       // const jsBubble = '.js-mv-bubble [id*=item]'; // バブル（丸い図形）
       const jsBubble = '.js-mv-bubble'; // バブル（丸い図形）
       const jsText = '.js-mv_title-item span'; // メインビジュアルのタイトル
@@ -514,35 +516,40 @@ export default {
 // timelineを作成
       let tl = gsap.timeline();
 
-      // tl.to(
-      //     /* ドット */
-      //     /* 0.8秒後に起動 */
-      //     jsDot, {
-      //       opacity: 1,
-      //       y: 0,
-      //       duration: 0.8,
-      //       delay: 0.8,
-      //       stagger: {
-      //         amount: 0.5,
-      //         from: "start",
-      //         ease: 'power4.inOut'
-      //       }
-      //     },
-      // ).to(
-      //     /* ドット */
-      //     /* 前のアニメーションが完了した後、ドットを消す */
-      //     jsDot, {
-      //       opacity: 0
-      //     }
-      // ).to(
-      //     /* カーテン */
-      //     /* 前のアニメーションが完了した0.5秒後に、カーテンを下へ移動 */
-      //     jsLoaderBg, {
-      //       y: '100%'
-      //     },
-      //     '+=0.5'
-      // ).to(jsBubble, {
-      tl.to(jsBubble, {
+      tl.to(
+          jsDotWrap, {
+            duration: 0,
+            delay: 0,
+            display: "inline-flex"
+          }
+      ).to(
+          /* ドット */
+          /* 0.8秒後に起動 */
+          jsDot, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            stagger: {
+              amount: 0.5,
+              from: "start",
+              ease: 'power4.inOut'
+            }
+          },
+      ).to(
+          /* ドット */
+          /* 前のアニメーションが完了した後、ドットを消す */
+          jsDot, {
+            opacity: 0
+          }
+      ).to(
+          /* カーテン */
+          /* 前のアニメーションが完了した0.5秒後に、カーテンを下へ移動 */
+          jsLoaderBg, {
+            y: '100%'
+          },
+          '+=0.5'
+      ).to(jsBubble, {
+      // tl.to(jsBubble, {
         /* バブル */
         /* 0.2秒後に、1秒かけてバブルが個別にアニメーション */
         opacity: 1,
@@ -603,6 +610,7 @@ export default {
           //   opacity: 1,
           // })
           .to(jsBubble, {
+            delay: 2,
             duration: 0.5,
             opacity: 1,
             y: -1000,
@@ -874,6 +882,20 @@ export default {
   }
 }
 
+.load-circle {
+  background-image: url("@/assets/photos/goat/load.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  height: 10vmax;
+  width: 10vmax;
+  margin: 0 auto;
+  pointer-events: none;
+  /*right: -6vw;*/
+  /*top: 5vh;*/
+  z-index: -1;
+}
+
 .bg-circle-01 {
   background-image: url("@/assets/photos/yuka/vertical/94.jpg");
   background-size: cover;
@@ -938,7 +960,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: #fff;
   z-index: 100;
   display: grid;
   place-items: center;
@@ -947,15 +969,16 @@ export default {
 
 .c-loader-dot {
   /*display: inline-flex;*/
-  /*align-items: center;*/
+  display: none;
+  align-items: center;
   /*justify-content: start;*/
-  /*pointer-events: none;*/
+  pointer-events: none;
 }
 
-.c-loader-dot > span {
+.c-loader-dot > div {
   display: block;
-  width: 30px;
-  height: 30px;
+  height: 10vmax;
+  width: 10vmax;
   border-radius: 50%;
   background-color: #fff;
 }
