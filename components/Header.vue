@@ -1,6 +1,6 @@
 <template>
 
-<!--  <img id="img" src="@/assets/photos/_DSC0094.jpg">-->
+<!--  <img id="img" src="@/assets/photos/_DSC0094.webp">-->
 <!--  <svg id="svg">-->
 <!--    <defs>-->
 <!--      <mask id="mask">-->
@@ -949,7 +949,7 @@ export default {
 }
 
 .load-circle {
-  background-image: url("@/assets/photos/goat/load.jpg");
+  background-image: url("@/assets/photos/goat/load.webp");
   background-size: cover;
   background-position: center;
   border-radius: 50%;
@@ -963,7 +963,7 @@ export default {
 }
 
 .bg-circle-01 {
-  background-image: url("@/assets/photos/yuka/vertical/94.jpg");
+  background-image: url("@/assets/photos/yuka/vertical/94.webp");
   background-size: cover;
   position: absolute;
   z-index: -2;
@@ -976,7 +976,7 @@ export default {
 }
 
 .bg-circle-02 {
-  background-image: url("@/assets/photos/yuka/horizontal/43.jpg");
+  background-image: url("@/assets/photos/yuka/horizontal/43.webp");
   background-size: cover;
   position: absolute;
   z-index: -1;
@@ -989,7 +989,7 @@ export default {
 
 @media (min-width: 640px) {
   .bg-circle-01 {
-    background-image: url("@/assets/photos/yuka/vertical/94.jpg");
+    background-image: url("@/assets/photos/yuka/vertical/94.webp");
     background-size: cover;
     position: absolute;
     z-index: -2;
@@ -1002,7 +1002,7 @@ export default {
   }
 
   .bg-circle-02 {
-    background-image: url("@/assets/photos/yuka/horizontal/43.jpg");
+    background-image: url("@/assets/photos/yuka/horizontal/43.webp");
     background-size: cover;
     position: absolute;
     z-index: -1;
@@ -1193,17 +1193,17 @@ input {
 }
 
 .bg-goat-01:after {
-  background-image: url("@/assets/photos/goat/badge/1.jpeg");
+  background-image: url("@/assets/photos/goat/badge/1.webp");
   background-size: cover;
   background-position: center;
 }
 .bg-goat-02:after {
-  background-image: url("@/assets/photos/goat/badge/2.jpeg");
+  background-image: url("@/assets/photos/goat/badge/2.webp");
   background-size: cover;
   background-position: center;
 }
 .bg-goat-03:after {
-  background-image: url("@/assets/photos/goat/badge/3.jpeg");
+  background-image: url("@/assets/photos/goat/badge/3.webp");
   background-size: cover;
   background-position: center;
 }

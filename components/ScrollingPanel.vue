@@ -14,58 +14,58 @@
     <section class="scroll-gallery">
       <ul class="wrapper" style="translate: none; rotate: none; scale: none; transform: translate3d(1362.08px, 0px, 0px);">
         <li>
-          <img src="@/assets/photos/yuka/horizontal/1.jpg">
+          <img src="@/assets/photos/yuka/horizontal/1.webp">
         </li>
         <li>
-          <img src="@/assets/photos/yuka/horizontal/12.jpg">
+          <img src="@/assets/photos/yuka/horizontal/12.webp">
         </li>
         <li>
-          <img src="@/assets/photos/yuka/horizontal/13.jpg">
+          <img src="@/assets/photos/yuka/horizontal/13.webp">
         </li>
       </ul>
     </section>
     <section class="scroll-gallery">
       <ul class="wrapper" style="translate: none; rotate: none; scale: none; transform: translate(-2416px, 0px);">
         <li>
-          <img src="@/assets/photos/yuka/horizontal/17.jpg">
+          <img src="@/assets/photos/yuka/horizontal/17.webp">
         </li>
         <li>
-          <img src="@/assets/photos/yuka/horizontal/16.jpg">
+          <img src="@/assets/photos/yuka/horizontal/16.webp">
         </li>
         <li>
-          <img src="@/assets/photos/yuka/horizontal/36.jpg">
+          <img src="@/assets/photos/yuka/horizontal/36.webp">
         </li>
       </ul>
     </section>
     <section class="scroll-gallery">
       <ul class="wrapper" style="translate: none; rotate: none; scale: none; transform: translate(100%, 0px);">
         <li>
-          <img src="@/assets/photos/yuka/vertical/3.jpg">
+          <img src="@/assets/photos/yuka/vertical/3.webp">
         </li>
         <li>
-          <img src="@/assets/photos/yuka/vertical/4.jpg">
+          <img src="@/assets/photos/yuka/vertical/4.webp">
         </li>
         <li>
-          <img src="@/assets/photos/yuka/vertical/33.jpg">
+          <img src="@/assets/photos/yuka/vertical/33.webp">
         </li>
         <li>
-          <img src="@/assets/photos/yuka/vertical/42.jpg">
+          <img src="@/assets/photos/yuka/vertical/42.webp">
         </li>
       </ul>
     </section>
     <section class="scroll-gallery">
       <ul class="wrapper" style="translate: none; rotate: none; scale: none; transform: translate(-3216px, 0px);">
         <li>
-          <img src="@/assets/photos/yuka/vertical/74.jpg">
+          <img src="@/assets/photos/yuka/vertical/74.webp">
         </li>
         <li>
-          <img src="@/assets/photos/yuka/vertical/92.jpg">
+          <img src="@/assets/photos/yuka/vertical/92.webp">
         </li>
         <li>
-          <img src="@/assets/photos/yuka/vertical/115.jpg">
+          <img src="@/assets/photos/yuka/vertical/115.webp">
         </li>
         <li>
-          <img src="@/assets/photos/yuka/vertical/100.jpg">
+          <img src="@/assets/photos/yuka/vertical/100.webp">
         </li>
       </ul>
     </section>
