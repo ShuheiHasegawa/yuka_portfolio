@@ -1,4 +1,5 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
+// @ts-ignore
 export default defineNuxtConfig({
     css: [
         // "vuetify/lib/styles/main.sass",
@@ -24,8 +25,12 @@ export default defineNuxtConfig({
         // transpile: ['swiper']
     },
     modules: [
-      '@nuxtjs/color-mode'
+      '@nuxtjs/color-mode',
+      '@nuxt/image-edge',
     ],
+    image: {
+        dir: 'assets/photos'
+    },
     vite: {
         define: {
             "process.env.DEBUG": false,

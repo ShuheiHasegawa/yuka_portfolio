@@ -14,58 +14,114 @@
     <section class="scroll-gallery">
       <ul class="wrapper" style="translate: none; rotate: none; scale: none; transform: translate3d(1362.08px, 0px, 0px);">
         <li>
-          <img src="@/assets/photos/yuka/horizontal/1.webp">
+          <nuxt-img
+              src="/yuka/horizontal/1.webp"
+              format="webp"
+              loading="lazy"
+          />
         </li>
         <li>
-          <img src="@/assets/photos/yuka/horizontal/12.webp">
+          <nuxt-img
+              src="/yuka/horizontal/12.webp"
+              format="webp"
+              loading="lazy"
+          />
         </li>
         <li>
-          <img src="@/assets/photos/yuka/horizontal/13.webp">
+          <nuxt-img
+              src="/yuka/horizontal/13.webp"
+              format="webp"
+              loading="lazy"
+          />
         </li>
       </ul>
     </section>
     <section class="scroll-gallery">
       <ul class="wrapper" style="translate: none; rotate: none; scale: none; transform: translate(-2416px, 0px);">
         <li>
-          <img src="@/assets/photos/yuka/horizontal/17.webp">
+          <nuxt-img
+              src="/yuka/horizontal/17.webp"
+              format="webp"
+              loading="lazy"
+          />
         </li>
         <li>
-          <img src="@/assets/photos/yuka/horizontal/16.webp">
+          <nuxt-img
+              src="/yuka/horizontal/16.webp"
+              format="webp"
+              loading="lazy"
+          />
         </li>
         <li>
-          <img src="@/assets/photos/yuka/horizontal/36.webp">
+          <nuxt-img
+              src="/yuka/horizontal/36.webp"
+              format="webp"
+              loading="lazy"
+          />
         </li>
       </ul>
     </section>
     <section class="scroll-gallery">
       <ul class="wrapper" style="translate: none; rotate: none; scale: none; transform: translate(100%, 0px);">
         <li>
-          <img src="@/assets/photos/yuka/vertical/3.webp">
+          <nuxt-img
+              src="/yuka/vertical/3.webp"
+              format="webp"
+              loading="lazy"
+          />
         </li>
         <li>
-          <img src="@/assets/photos/yuka/vertical/4.webp">
+          <nuxt-img
+              src="/yuka/vertical/4.webp"
+              format="webp"
+              loading="lazy"
+          />
         </li>
         <li>
-          <img src="@/assets/photos/yuka/vertical/33.webp">
+          <nuxt-img
+              src="/yuka/vertical/33.webp"
+              format="webp"
+              loading="lazy"
+          />
         </li>
         <li>
-          <img src="@/assets/photos/yuka/vertical/42.webp">
+          <nuxt-img
+              src="/yuka/vertical/42.webp"
+              format="webp"
+              loading="lazy"
+          />
         </li>
       </ul>
     </section>
     <section class="scroll-gallery">
       <ul class="wrapper" style="translate: none; rotate: none; scale: none; transform: translate(-3216px, 0px);">
         <li>
-          <img src="@/assets/photos/yuka/vertical/74.webp">
+          <nuxt-img
+              src="/yuka/vertical/74.webp"
+              format="webp"
+              loading="lazy"
+          />
         </li>
         <li>
-          <img src="@/assets/photos/yuka/vertical/92.webp">
+          <nuxt-img
+              src="/yuka/vertical/92.webp"
+              format="webp"
+              loading="lazy"
+          />
         </li>
         <li>
-          <img src="@/assets/photos/yuka/vertical/115.webp">
+          <nuxt-img
+              src="/yuka/vertical/115.webp"
+              format="webp"
+              loading="lazy"
+          />
         </li>
         <li>
-          <img src="@/assets/photos/yuka/vertical/100.webp">
+          <nuxt-img
+              src="/yuka/vertical/100.webp"
+              format="webp"
+              loading="lazy"
+          />
         </li>
       </ul>
     </section>
