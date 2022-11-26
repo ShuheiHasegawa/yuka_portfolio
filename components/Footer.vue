@@ -29,15 +29,6 @@
       </figure>
     </div>
 
-<!--    <div class="goat-front-area">-->
-<!--      <div class="w-screen flex justify-center items-center">-->
-<!--        <figure class="goat-front-img">-->
-<!--          <img src="@/assets/photos/_DSC3864.jpg"/>-->
-<!--        </figure>-->
-<!--        <img src="@/assets/photos/goat/original/AdobeStock_312826315.png"/>-->
-<!--      </div>-->
-<!--    </div>-->
-
     <div class="mt-64">
       <div class="half-circle-area">
         <div class="half-circle"></div>
@@ -48,7 +39,6 @@
       <div class="sign-area">
         <img src="@/assets/photos/draw/draw_goat.png"/>
       </div>
-<!--      <div class="profile-area h-screen flex justify-center items-center">-->
       <div class="profile-area">
         <div class="text text-profile">
           <p>
@@ -61,6 +51,8 @@
       </div>
 
     <div class="one-page bg-profile">
+      <div class="enable-drag-profile my-8">
+
       <div class="sign-area">
         <img src="@/assets/photos/draw/draw_sign.png"/>
       </div>
@@ -70,6 +62,29 @@
           Yuka<br>Kohinata
         </div>
       </div>
+
+      <div id="dragGoat4" class="goat-wrapper">
+        <input type="checkbox">
+        <label>
+          <i class="icon-off bg-goat-04"></i>
+        </label>
+      </div>
+
+      <div id="dragGoat5" class="goat-wrapper">
+        <input type="checkbox">
+        <label>
+          <i class="icon-off bg-goat-05"></i>
+        </label>
+      </div>
+
+      <div id="dragGoat6" class="goat-wrapper">
+        <input type="checkbox">
+        <label>
+          <i class="icon-off bg-goat-06"></i>
+        </label>
+      </div>
+
+      </div>
     </div>
 
   </div>
@@ -77,6 +92,7 @@
 
 <script>
 import gsap from "gsap"
+import { Draggable } from "gsap/Draggable";
 
 export default {
   name: "Footer",
@@ -151,6 +167,66 @@ export default {
       //     .to(".text-footer", {
       //       y: window.innerHeight
       //     })
+
+      gsap.set("#dragGoat4",{
+        display: "block",
+        x: -30,
+        y: 0
+      });
+      gsap.set("#dragGoat5",{
+        display: "block",
+        x:300,
+        y:350
+      });
+      gsap.set("#dragGoat6",{
+        display: "block",
+        x: -150,
+        y: 80
+      });
+
+      // Create Draggable instance
+      Draggable.create("#dragGoat4", {
+        type: "x,y",
+        bounds: ".enable-drag-profile",
+        // edgeResistance:0.5,
+        throwProps: true,
+        inertia: true,
+        // autoScroll: true,
+        onClick:function() {
+          console.log("clicked");
+        },
+        onDragEnd:function() {
+          console.log("drag ended");
+        }
+      });
+      Draggable.create("#dragGoat5", {
+        type: "x,y",
+        bounds: ".enable-drag-profile",
+        // edgeResistance:0.5,
+        throwProps: true,
+        inertia: true,
+        // autoScroll: true,
+        onClick:function() {
+          console.log("clicked");
+        },
+        onDragEnd:function() {
+          console.log("drag ended");
+        }
+      });
+      Draggable.create("#dragGoat6", {
+        type: "x,y",
+        bounds: ".enable-drag-profile",
+        // edgeResistance:0.5,
+        throwProps: true,
+        inertia: true,
+        // autoScroll: true,
+        onClick:function() {
+          console.log("clicked");
+        },
+        onDragEnd:function() {
+          console.log("drag ended");
+        }
+      });
 
     }
   }
@@ -264,6 +340,14 @@ export default {
   background-color: #FEACB7;
 }
 
+.enable-drag-profile {
+  top: 0;
+  /*height: 70%;*/
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
 .one-page {
   height: 100vh;
   width: 100%;
@@ -310,6 +394,108 @@ export default {
   padding: 1em 0 2em 0;
   width: 100%;
   text-align: center;
+}
+
+/* やぎボタン */
+.goat-wrapper {
+  display: none;
+  width: 120px;
+  height: 120px;
+  margin: 60px auto;
+  position: relative;
+  z-index: 9;
+}
+
+label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #b25244;
+  background: linear-gradient(#f7f2f6, #b2ac9e);
+  position: relative;
+  color: #a5a39d;
+  font-size: 70px;
+  text-align: center;
+  line-height: 150px;
+  transition: all 0.3s ease-out;
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
+  z-index: -1;
+  box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.13), 0 5px 8px rgba(0, 0, 0, 0.3), 0 10px 10px 4px rgba(0, 0, 0, 0.3);
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  top: -20px;
+  bottom: -20px;
+  z-index: -2;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+label:before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  top: -10px;
+  bottom: -10px;
+  z-index: -1;
+  border-radius: inherit;
+  box-shadow: inset 0 10px 10px rgba(0, 0, 0, 0.13);
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+}
+
+input:checked ~ label {
+  box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.13), 0 5px 8px rgba(0, 0, 0, 0.35), 0 3px 10px 4px rgba(0, 0, 0, 0.2);
+  color: #9abb82;
+}
+
+.icon-off:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  margin: -35% 0 0 -35%;
+  border-radius: 50%;
+  /*background: linear-gradient(#cbc7bc, #d2cbc3);*/
+  box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.05), 0 2px 5px rgba(255, 255, 255, 0.1);
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+}
+
+input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 100;
+  position: absolute;
+  cursor: pointer;
+}
+
+.bg-goat-04:after {
+  background-image: url("@/assets/photos/goat/badge/4.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+.bg-goat-05:after {
+  background-image: url("@/assets/photos/goat/badge/5.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+.bg-goat-06:after {
+  background-image: url("@/assets/photos/goat/badge/6.jpeg");
+  background-size: cover;
+  background-position: center;
 }
 
 </style>

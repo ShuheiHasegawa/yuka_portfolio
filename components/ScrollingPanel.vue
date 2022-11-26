@@ -107,7 +107,7 @@ export default {
             scrollTrigger: {
               trigger: section,
               // start: "top bottom",
-              start: "-100% bottom", // ウィンドウのどの位置を発火の基準点にするか
+              start: "10% bottom", // ウィンドウのどの位置を発火の基準点にするか
               // end: "bottom top", // ウィンドウのどの位置をイベントの終了点にするか
               scrub: 0.5,
               // pin: true,
