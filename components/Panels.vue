@@ -686,8 +686,7 @@ export default {
 
 ul#polaroids {
   list-style-type: none;
-  width: 60vmax;
-  margin: 32px;
+  width: 30vmax;
 }
 
 ul#polaroids li a {
