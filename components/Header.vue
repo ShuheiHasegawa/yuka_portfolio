@@ -630,6 +630,50 @@ export default {
             duration: 0.8, // seconds
           })
 
+      gsap
+          .timeline({
+            defaults: {
+              ease: "power2.out", duration: 1
+            },
+          })
+          .from(".cls-5", {
+            delay: 3,
+            duration: 0.5,
+            scale: 0.5,
+          })
+          .to(".cls-5", {
+            duration: 0.5,
+            scale: 1,
+            onComplete: () => {
+              this.$colorMode.preference = 'color-five';
+            },
+          })
+          .from(".cls-7", {
+            delay: 0,
+            duration: 0.5,
+            scale: 0.5,
+          })
+          .to(".cls-7", {
+            duration: 0.5,
+            scale: 1,
+            onComplete: () => {
+              this.$colorMode.preference = 'color-seven';
+            },
+          })
+          .from(".cls-4", {
+            delay: 0,
+            duration: 0.5,
+            scale: 0.5,
+          })
+          .to(".cls-4", {
+            duration: 0.5,
+            scale: 1,
+            onComplete: () => {
+              this.$colorMode.preference = 'color-four';
+            },
+          })
+      ;
+
       // console.clear();
       //
       // const svg = document.querySelector("#svg");
@@ -724,6 +768,25 @@ export default {
         x:-210,
         y:480
       });
+
+      gsap
+          .timeline({
+            defaults: {
+              ease: "power2.out", duration: 1
+            },
+          })
+          .fromTo("#dragGoat1, #dragGoat2, #dragGoat3", 1, {
+            rotation: -45
+          }, {
+            rotation: 45,
+            repeat: 5,
+            yoyo: true,
+            ease: "Power2.easeInOut"
+          })
+          .set("#dragGoat1, #dragGoat2, #dragGoat3", {
+            rotation: 0,
+          })
+      ;
 
       // Create Draggable instance
       Draggable.create("#dragGoat1", {
