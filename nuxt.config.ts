@@ -23,12 +23,9 @@ export default defineNuxtConfig({
         // transpile: ['gsap', 'swiper']
         // transpile: ['swiper']
     },
-    // buildModules: ['@nuxtjs/color-mode'],
-
-    // buildModules: ["@nuxtjs/tailwindcss"],
-    // css: ["@/assets/css/tailwind.css"], // <= ドキュメントからさらに追加
-
-    modules: ['@nuxtjs/color-mode'],
+    modules: [
+      '@nuxtjs/color-mode'
+    ],
     vite: {
         define: {
             "process.env.DEBUG": false,
