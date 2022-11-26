@@ -43,14 +43,12 @@ export default {
               ease: "power2.out", duration: 1
             },
           })
-          // 1.5秒かけ黒色背景を表示
           .to(".background-color", {
             duration: 1, //アニメーションの時間の設定
             opacity: 1, //表示状態の指定
           })
-          // 初期遅延3.5秒かけてから.titleを表示
           .to(".title span", {
-              delay: 0.25, //アニメーションの初期遅延（アニメーションが開始されるまでの指定）
+              delay: 2.25, //アニメーションの初期遅延（アニメーションが開始されるまでの指定）
               duration: 0.5, //アニメーションの時間の設定
               opacity: 1, //表示状態の指定
               //同じclass名のバリデーションの設定

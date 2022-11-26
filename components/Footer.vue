@@ -124,7 +124,7 @@ export default {
         scrollTrigger: {
           trigger: ".profile-area",
           start: "top bottom",
-          markers: true,
+          // markers: true,
           scrub: true,
           // pin: true,
         }
