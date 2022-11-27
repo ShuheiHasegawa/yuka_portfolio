@@ -208,63 +208,50 @@ export default {
       // })
       //     .from(".text1", {x: innerWidth * 1, opacity: 0, duration: 5})
 
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".box2",
-          start: "center center",
-          end: "bottom top",
-          // markers: true,
-          scrub: true,
-          pin: true,
-        }
-      })
-          .from(".text4", {x: innerWidth * 1, opacity: 0})
-          .from(".text5", {x: innerWidth * 1, opacity: 0})
+      // gsap.timeline({
+      //   scrollTrigger: {
+      //     trigger: ".box2",
+      //     start: "center center",
+      //     end: "bottom top",
+      //     // markers: true,
+      //     scrub: true,
+      //     pin: true,
+      //   }
+      // })
+      //     .from(".text4", {x: innerWidth * 1, opacity: 0})
+      //     .from(".text5", {x: innerWidth * 1, opacity: 0})
 
-      gsap.to(".photo1", {
-        delay: 1,
-        duration: 1.5,
-        y: -10, // 少し上に移動させる
-        opacity: 1,
-        ease: "power2.out",
-        // 複数要素を扱うプロパティ
-        stagger: {
-          from: "start", //左側から
-          amount: 0.8 // 0.8秒おきに
-        }
-      });
-
-      gsap
-          .timeline({
-            defaults: {ease: "power2.out", duration: 1}, // timelineのプロパティ
-            scrollTrigger: {
-              // markers: true, // マーカーを表示するか（開発用）
-              trigger: ".photo-row1", // この要素と交差するとイベントが発火
-              start: "top 50%", // ウィンドウのどの位置を発火の基準点にするか
-              end: "bottom top", // ウィンドウのどの位置をイベントの終了点にするか
-              toggleActions: "restart none none none", // スクロールイベントで発火するアニメーションの種
-            },
-          })
-          .from(".photo-row2", {
-            delay: 0.5,
-            duration: 0.5,
-            opacity: 0,
-            x: 100,
-          })
-          .to(".photo-row2", {
-            duration: 0.5,
-            opacity: 1,
-          })
-          .from(".photo-row3", {
-            delay: 0.5,
-            duration: 0.5,
-            opacity: 0,
-            x: -100,
-          })
-          .to(".photo-row3", {
-            duration: 0.5,
-            opacity: 1,
-          })
+      // gsap
+      //     .timeline({
+      //       defaults: {ease: "power2.out", duration: 1}, // timelineのプロパティ
+      //       scrollTrigger: {
+      //         // markers: true, // マーカーを表示するか（開発用）
+      //         trigger: ".photo-row1", // この要素と交差するとイベントが発火
+      //         start: "top 50%", // ウィンドウのどの位置を発火の基準点にするか
+      //         end: "bottom top", // ウィンドウのどの位置をイベントの終了点にするか
+      //         toggleActions: "restart none none none", // スクロールイベントで発火するアニメーションの種
+      //       },
+      //     })
+      //     .from(".photo-row2", {
+      //       delay: 0.5,
+      //       duration: 0.5,
+      //       opacity: 0,
+      //       x: 100,
+      //     })
+      //     .to(".photo-row2", {
+      //       duration: 0.5,
+      //       opacity: 1,
+      //     })
+      //     .from(".photo-row3", {
+      //       delay: 0.5,
+      //       duration: 0.5,
+      //       opacity: 0,
+      //       x: -100,
+      //     })
+      //     .to(".photo-row3", {
+      //       duration: 0.5,
+      //       opacity: 1,
+      //     })
 
       // 横スクロール
       const wrapper = document.querySelector('#wrapper');

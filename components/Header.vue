@@ -493,7 +493,8 @@ export default {
 
 //初期状態をセット
       gsap.set(
-          [jsBubble, jsText, jsLeadText],
+          // [jsBubble, jsText, jsLeadText],
+          [jsBubble],
           //アニメーションさせない静止状態を指定する
           {
             opacity: 0,
@@ -508,10 +509,10 @@ export default {
       });
 
       /* ヘッダー */
-      gsap.set(jsHeader, {
-        opacity: 0,
-        y: -50
-      });
+      // gsap.set(jsHeader, {
+      //   opacity: 0,
+      //   y: -50
+      // });
 
 // timelineを作成
       let tl = gsap.timeline();
@@ -560,36 +561,37 @@ export default {
           from: "start",
           ease: "sine.in"
         }
-      }, '+=0.2').to(
+      });
+      // }, '+=0.2').to(
           /* タイトル */
-          jsText, {
+          // jsText, {
             /* 前のアニメーションが完了する0.1秒前に実行 */
-            opacity: 1,
-            y: 0,
-            stagger: {
-              amount: 1,
-              from: "start",
-              ease: "sine.in"
-            }
-          },
-          "-=0.1"
-      ).to(
+            // opacity: 1,
+            // y: 0,
+            // stagger: {
+            //   amount: 1,
+            //   from: "start",
+            //   ease: "sine.in"
+            // }
+          // },
+          // "-=0.1"
+      // ).to(
           /* リード文 */
-          jsLeadText, {
+          // jsLeadText, {
             /* 前のアニメーションが完了する0.1秒前に実行 */
-            opacity: 1,
-            y: 0,
-          },
-          "-=0.2"
-      ).to(
+            // opacity: 1,
+            // y: 0,
+          // },
+          // "-=0.2"
+      // ).to(
           /* ヘッダー */
           /* 前のアニメーションと同時 */
-          jsHeader, {
-            opacity: 1,
-            y: 0,
-          },
-          '<'
-      );
+          // jsHeader, {
+          //   opacity: 1,
+          //   y: 0,
+          // },
+          // '<'
+      // );
 
       gsap
           .timeline({
