@@ -90,7 +90,7 @@ export default {
 }
 
 .title-area {
-  bottom: 6vh;
+  bottom: 8vh;
   /*height: 30vh;*/
   width: 100%;
   position: absolute;

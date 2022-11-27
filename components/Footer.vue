@@ -10,14 +10,16 @@
           <p>I love goats.</p>
         </div>
       </div>
-      <figure class="goat-front-mask">
-        <nuxt-img
-            src="/yuka/vertical/68.webp"
-            class="opacity-80"
-            format="webp"
-            loading="lazy"
-        />
-      </figure>
+      <div class="flex justify-center">
+        <figure class="goat-front-mask">
+          <nuxt-img
+              src="/yuka/vertical/68.webp"
+              class="opacity-80"
+              format="webp"
+              loading="lazy"
+          />
+        </figure>
+      </div>
     </div>
 
     <div class="stripe-panel2 relative">
@@ -29,14 +31,16 @@
           <p>I love parfaits.</p>
         </div>
       </div>
-      <figure class="goat-back-img">
-        <nuxt-img
-            src="/yuka/vertical/114.webp"
-            class="opacity-80"
-            format="webp"
-            loading="lazy"
-        />
-      </figure>
+      <div class="flex justify-center">
+        <figure class="goat-back-img">
+          <nuxt-img
+              src="/yuka/vertical/114.webp"
+              class="opacity-80"
+              format="webp"
+              loading="lazy"
+          />
+        </figure>
+      </div>
     </div>
 
     <div class="mt-64">
@@ -290,47 +294,37 @@ export default {
   /*マスクレイヤーとして使用する画像*/
   mask-image: url("@/assets/photos/goat/front.svg");
   mask-repeat: no-repeat;
-  mask-position: 3% 0;
+  mask-position: center;
   mask-size: auto 100%;
   -webkit-mask-image: url("@/assets/photos/goat/front.svg");
   -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: 3% 0;
+  -webkit-mask-position: center;
   -webkit-mask-size: auto 100%;
   /*margin: 0 auto;*/
-  width: 512px;
+  /*width: 512px;*/
   /* top と left に 50% を指定して、要素の左上を中央にする. */
   position: absolute;
   top: 40%;
-  left: 50%;
+  /*left: 50%;*/
   /* 要素の大きさの半分をネガティブマージンとすることで、要素を画面中央にする. */
   margin-top: -385px;
-  margin-left: -256px;
+  /*margin-left: -256px;*/
 }
 
 .goat-back-img {
   /*マスクレイヤーとして使用する画像*/
   mask-image: url("@/assets/photos/parfaits.svg");
   mask-repeat: no-repeat;
-  mask-position: 3% 0;
+  mask-position: center;
   mask-size: auto 100%;
   -webkit-mask-image: url("@/assets/photos/parfaits.svg");
   -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: 3% 0;
+  -webkit-mask-position: center;
   -webkit-mask-size: auto 100%;
-  /*margin: 0 auto;*/
-  width: 512px;
-  /* top と left に 50% を指定して、要素の左上を中央にする. */
+  top: 60%;
+  width: 360px;
+  margin-top: -400px;
   position: absolute;
-  top: 40%;
-  left: 50%;
-  /* 要素の大きさの半分をネガティブマージンとすることで、要素を画面中央にする. */
-  margin-top: -385px;
-  margin-left: -256px;
-}
-.goat-back-img1 {
-  /*マスクレイヤーとして使用する画像*/
-  margin: 0 auto;
-  width: 512px;
 }
 
 .stripe-panel1 {
