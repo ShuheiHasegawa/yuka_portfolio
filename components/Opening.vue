@@ -43,10 +43,10 @@ export default {
               ease: "power2.out", duration: 1
             },
           })
-          .to(".background-color", {
-            duration: 1, //アニメーションの時間の設定
-            opacity: 1, //表示状態の指定
-          })
+          // .to(".background-color", {
+          //   duration: 1, //アニメーションの時間の設定
+          //   opacity: 1, //表示状態の指定
+          // })
           .to(".title span", {
               delay: 2.25, //アニメーションの初期遅延（アニメーションが開始されるまでの指定）
               duration: 0.5, //アニメーションの時間の設定
