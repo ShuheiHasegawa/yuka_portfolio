@@ -953,7 +953,9 @@ export default {
 
 .load-circle {
   background-image: url("@/assets/photos/goat/load.webp");
-  background-size: cover;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-position: center;
   border-radius: 50%;
   height: 10vmax;
