@@ -112,13 +112,28 @@
 
     <div class="relative my-32">
       <div>
-        <img class="gray-circle01 bg-gray-600 opacity-50"/>
+        <nuxt-img
+            src="/yuka/horizontal/5.webp"
+            class="gray-circle01 bg-gray-600 opacity-50"
+            format="webp"
+            loading="lazy"
+        />
       </div>
       <div class="mt-16">
-        <img class="gray-circle02 bg-gray-600 opacity-50"/>
+        <nuxt-img
+            src="/yuka/vertical/12.webp"
+            class="gray-circle02 bg-gray-600 opacity-50"
+            format="webp"
+            loading="lazy"
+        />
       </div>
       <div class="mt-16">
-        <img class="gray-circle03 bg-gray-600 opacity-50"/>
+        <nuxt-img
+            src="/yuka/horizontal/14.webp"
+            class="gray-circle03 bg-gray-600 opacity-50"
+            format="webp"
+            loading="lazy"
+        />
       </div>
     </div>
 
@@ -146,14 +161,14 @@
               loading="lazy"
           />
         </a></li>
-        <li><a href="#polaroids" title="どや顔">
+        <li><a href="#polaroids" title="どやがお">
           <nuxt-img
               src="/yuka/vertical/36.webp"
               format="webp"
               loading="lazy"
           />
         </a></li>
-        <li><a href="#polaroids" title="むにゅ">
+        <li><a href="#polaroids" title="むにゅがお">
           <nuxt-img
               src="/yuka/vertical/52.webp"
               format="webp"
@@ -167,7 +182,7 @@
               loading="lazy"
           />
         </a></li>
-        <li><a href="#polaroids" title="パフェゆかさん">
+        <li><a href="#polaroids" title="パフェになりました">
           <nuxt-img
               src="/yuka/vertical/125.webp"
               format="webp"
@@ -664,8 +679,9 @@ export default {
 .gray-circle01 {
   width: 60vw;
   height: 60vw;
-  background-image: url("@/assets/photos/yuka/horizontal/5.webp");
-  background-size: cover;
+  object-fit:cover;
+  /*background-image: url("@/assets/photos/yuka/horizontal/5.webp");*/
+  /*background-size: cover;*/
   background-position: right 30% top 20px;
   border-radius: 50%;
   margin: 0 auto;
@@ -674,8 +690,9 @@ export default {
 .gray-circle02 {
   width: 60vw;
   height: 60vw;
-  background-image: url("@/assets/photos/yuka/vertical/12.webp");
-  background-size: cover;
+  object-fit:cover;
+  /*background-image: url("@/assets/photos/yuka/vertical/12.webp");*/
+  /*background-size: cover;*/
   border-radius: 50%;
   margin: 0 auto;
   pointer-events: none;
@@ -683,8 +700,10 @@ export default {
 .gray-circle03 {
   width: 60vw;
   height: 60vw;
-  background-image: url("@/assets/photos/yuka/horizontal/14.webp");
-  background-size: cover;
+  object-fit:cover;
+  background-position: right 30% top 120px;
+  /*background-image: url("@/assets/photos/yuka/horizontal/14.webp");*/
+  /*background-size: cover;*/
   border-radius: 50%;
   margin: 0 auto;
   pointer-events: none;

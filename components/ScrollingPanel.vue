@@ -73,6 +73,7 @@
         <li>
           <nuxt-img
               src="/yuka/vertical/4.webp"
+              class="object-position-top"
               format="webp"
               loading="lazy"
           />
@@ -105,6 +106,7 @@
         <li>
           <nuxt-img
               src="/yuka/vertical/92.webp"
+              class="object-position-top"
               format="webp"
               loading="lazy"
           />
@@ -112,6 +114,7 @@
         <li>
           <nuxt-img
               src="/yuka/vertical/115.webp"
+              class="object-position-top"
               format="webp"
               loading="lazy"
           />
@@ -119,6 +122,7 @@
         <li>
           <nuxt-img
               src="/yuka/vertical/100.webp"
+              class="object-position-top"
               format="webp"
               loading="lazy"
           />
@@ -263,5 +267,9 @@ li {
   font-size: clamp(8rem, 15vw, 16rem);
   line-height: 1;
   font-weight: 900;
+}
+
+.object-position-top {
+  object-position: center top;
 }
 </style>

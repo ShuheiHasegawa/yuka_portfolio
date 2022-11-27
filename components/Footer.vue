@@ -309,11 +309,11 @@ export default {
 
 .goat-back-img {
   /*マスクレイヤーとして使用する画像*/
-  mask-image: url("@/assets/photos/goat/back.svg");
+  mask-image: url("@/assets/photos/parfaits.svg");
   mask-repeat: no-repeat;
   mask-position: 3% 0;
   mask-size: auto 100%;
-  -webkit-mask-image: url("@/assets/photos/goat/back.svg");
+  -webkit-mask-image: url("@/assets/photos/parfaits.svg");
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: 3% 0;
   -webkit-mask-size: auto 100%;

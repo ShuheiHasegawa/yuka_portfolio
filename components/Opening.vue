@@ -48,7 +48,7 @@ export default {
           //   opacity: 1, //表示状態の指定
           // })
           .to(".title span", {
-              delay: 2.25, //アニメーションの初期遅延（アニメーションが開始されるまでの指定）
+              delay: 7, //アニメーションの初期遅延（アニメーションが開始されるまでの指定）
               duration: 0.5, //アニメーションの時間の設定
               opacity: 1, //表示状態の指定
               //同じclass名のバリデーションの設定
@@ -90,8 +90,8 @@ export default {
 }
 
 .title-area {
-  bottom: 5vh;
-  height: 30vh;
+  bottom: 2vh;
+  /*height: 30vh;*/
   width: 100%;
   position: absolute;
   text-align: center;

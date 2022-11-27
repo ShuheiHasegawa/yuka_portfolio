@@ -75,8 +75,8 @@
 <!--        </div>&lt;!&ndash; /header &ndash;&gt;-->
 <!--      </header>-->
 
-      <div class="bg-circle-01"></div>
-      <div class="bg-circle-02"></div>
+    <div class="bg-circle-01"></div>
+    <div class="bg-circle-02"></div>
 
     <div id="dragGoat1" class="goat-wrapper">
       <input type="checkbox">
@@ -529,9 +529,9 @@ export default {
           jsDot, {
             opacity: 1,
             y: 0,
-            duration: 0.8,
+            duration: 2.5,
             stagger: {
-              amount: 0.5,
+              amount: 1.5,
               from: "start",
               ease: 'power4.inOut'
             }
@@ -554,7 +554,7 @@ export default {
         /* バブル */
         /* 0.2秒後に、1秒かけてバブルが個別にアニメーション */
         opacity: 1,
-        y: 50,
+        y: -50,
         duration: 0.8, // seconds
         stagger: {
           amount: 0.6,
@@ -593,44 +593,44 @@ export default {
           // '<'
       // );
 
-      gsap
-          .timeline({
-            defaults: {
-              ease: "power2.out", duration: 1
-            }, // timelineのプロパティ
-            scrollTrigger: {
-              // markers: true, // マーカーを表示するか（開発用）
-              trigger: ".second", // この要素と交差するとイベントが発火
-              start: "top center", // ウィンドウのどの位置を発火の基準点にするか
-              // start: "center top", // ウィンドウのどの位置を発火の基準点にするか
-              end: "bottom top", // ウィンドウのどの位置をイベントの終了点にするか
-              // toggleActions: "restart none none none", // スクロールイベントで発火するアニメーションの種
-            },
-          })
-          // .from(jsBubble, {
-          //   duration: 0.5,
-          //   opacity: 1,
-          // })
-          .to(jsBubble, {
-            delay: 2,
-            duration: 0.5,
-            opacity: 1,
-            y: -1000,
-            ease: "power2.inOut",
-            // each: 0.2,
-            // repeat: -1,  //１つの要素がのアニメーションが終わり次第、作動
-            // yoyo: true,　//yoyoあり
-            // stagger: {
-            //   amount: 0.6,
-            //   from: "end",
-            //   ease: "sine.out"
-            // }
-          })
-          .to(jsBubble, {
-            opacity: 1,
-            y: 50,
-            duration: 0.8, // seconds
-          })
+      // gsap
+      //     .timeline({
+      //       defaults: {
+      //         ease: "power2.out", duration: 1
+      //       }, // timelineのプロパティ
+      //       scrollTrigger: {
+      //         // markers: true, // マーカーを表示するか（開発用）
+      //         trigger: ".second", // この要素と交差するとイベントが発火
+      //         start: "top center", // ウィンドウのどの位置を発火の基準点にするか
+      //         // start: "center top", // ウィンドウのどの位置を発火の基準点にするか
+      //         end: "bottom top", // ウィンドウのどの位置をイベントの終了点にするか
+      //         // toggleActions: "restart none none none", // スクロールイベントで発火するアニメーションの種
+      //       },
+      //     })
+      //     // .from(jsBubble, {
+      //     //   duration: 0.5,
+      //     //   opacity: 1,
+      //     // })
+      //     .to(jsBubble, {
+      //       delay: 2,
+      //       duration: 0.5,
+      //       opacity: 1,
+      //       y: -1000,
+      //       ease: "power2.inOut",
+      //       // each: 0.2,
+      //       // repeat: -1,  //１つの要素がのアニメーションが終わり次第、作動
+      //       // yoyo: true,　//yoyoあり
+      //       // stagger: {
+      //       //   amount: 0.6,
+      //       //   from: "end",
+      //       //   ease: "sine.out"
+      //       // }
+      //     })
+      //     .to(jsBubble, {
+      //       opacity: 1,
+      //       y: 50,
+      //       duration: 0.8, // seconds
+      //     })
 
       gsap
           .timeline({
@@ -639,37 +639,37 @@ export default {
             },
           })
           .from(".cls-5", {
-            delay: 3,
+            delay: 7,
             duration: 0.5,
             scale: 0.5,
           })
           .to(".cls-5", {
-            duration: 0.5,
+            duration: 0,
             scale: 1,
             onComplete: () => {
               this.$colorMode.preference = 'color-five';
             },
           })
           .from(".cls-7", {
-            delay: 0,
-            duration: 0.5,
+            delay: 0.5,
+            duration: 0.25,
             scale: 0.5,
           })
           .to(".cls-7", {
-            duration: 0.5,
+            duration: 0,
             scale: 1,
             onComplete: () => {
               this.$colorMode.preference = 'color-seven';
             },
           })
           .from(".cls-4", {
-            delay: 0,
-            duration: 0.5,
-            scale: 0.5,
+            delay: 0.5,
+            duration: 0.25,
+            scale: 1,
           })
           .to(".cls-4", {
-            duration: 0.5,
-            scale: 1,
+            duration: 0.25,
+            scale: 3,
             onComplete: () => {
               this.$colorMode.preference = 'color-four';
             },
@@ -763,12 +763,13 @@ export default {
       gsap.set("#dragGoat2",{
         display: "block",
         x:300,
-        y:350
+        // y:250
+        y: "60%"
       });
       gsap.set("#dragGoat3",{
         display: "block",
         x:-210,
-        y:480
+        y: "70%"
       });
 
       gsap
@@ -785,7 +786,7 @@ export default {
             yoyo: true,
             ease: "Power2.easeInOut"
           })
-          .set("#dragGoat1, #dragGoat2, #dragGoat3", {
+          .to("#dragGoat1, #dragGoat2, #dragGoat3", {
             rotation: 0,
           })
       ;
